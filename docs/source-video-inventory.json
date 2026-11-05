@@ -1,0 +1,68 @@
+[
+  {
+    "file": "site/videos/video-1-alvolo.mp4",
+    "url": "https://alvolo.de/media/videos/video-1-alvolo.mp4",
+    "bytes": 2041285,
+    "sha256": "05b2483f0f1b179ef6d4c5d9741c4583f8753d211e7e041e71f3092e3222274f",
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_type": "audio"
+        },
+        {
+          "codec_type": "video",
+          "width": 576,
+          "height": 1024
+        }
+      ],
+      "format": {
+        "duration": "12.700000"
+      }
+    }
+  },
+  {
+    "file": "site/videos/video-2-alvolo.mp4",
+    "url": "https://alvolo.de/media/videos/video-2-alvolo.mp4",
+    "bytes": 2950475,
+    "sha256": "705a3f28ee760e6ad7a00fe50023edfd187232be3fd58ad682b4b4b3ce26b26a",
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_type": "audio"
+        },
+        {
+          "codec_type": "video",
+          "width": 576,
+          "height": 1024
+        }
+      ],
+      "format": {
+        "duration": "21.600000"
+      }
+    }
+  },
+  {
+    "file": "site/videos/video-3-alvolo.mp4",
+    "url": "https://alvolo.de/media/videos/video-3-alvolo.mp4",
+    "bytes": 2725889,
+    "sha256": "e8d58240725efc72fb5ceb0266d7647e92771074d9f929d9c7202ea077c844e3",
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_type": "audio"
+        },
+        {
+          "codec_type": "video",
+          "width": 576,
+          "height": 1024
+        }
+      ],
+      "format": {
+        "duration": "12.300000"
+      }
+    }
+  }
+]

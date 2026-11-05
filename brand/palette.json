@@ -1,0 +1,15 @@
+{
+  "existing": {
+    "red": "#C41E3A",
+    "charcoal": "#0A0A0A"
+  },
+  "proposal": {
+    "cream": "#F4E7CF",
+    "decorative_leaf": "#455332"
+  },
+  "fonts": {
+    "display": "Caprasimo Regular 400",
+    "body": "DM Sans 400 / 600 / 700, opsz 16"
+  },
+  "logo": "original PNG RGBA 1000x1000; no redesign"
+}

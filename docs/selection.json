@@ -1,0 +1,55 @@
+{
+  "project": "Pizzeria Al Volo — Hamburg",
+  "date": "2026-11-05",
+  "stage": "kit_complete",
+  "selected_model": 1,
+  "hero_model": 1,
+  "body_model": 1,
+  "name": "Momenti Veri",
+  "public_language": "de",
+  "source": "https://alvolo.de/",
+  "reference_board": "references/Modelo-1-Momenti-Veri-Aprovado.png",
+  "reference_board_role": "Prancha conceitual exata aprovada; não é screenshot da implementação.",
+  "reference_board_sha256": "86b95596ea70097cb152e783623c4ef3385060c664d417c379191c791095d01a",
+  "brand": {
+    "logo": "brand/Al-Volo-Logo-Original-Transparente.png",
+    "source_url": "https://alvolo.de/media/logo.alvolo.webp",
+    "mode": "PNG transparente, pixels preservados; sem redesenho"
+  },
+  "scale_correction": {
+    "baseline_px": 1024,
+    "max_desktop_scale": 1,
+    "capped_foregrounds": {
+      "hero_title_px": 76,
+      "hero_portrait_width_px": 560,
+      "menu_macro_width_px": 740
+    },
+    "hero_and_macro_cover": false,
+    "mobile": "independent reflow, no whole-board shrink",
+    "guardrail": "process/REGRAS-PARA-PROXIMOS-PROJETOS.md"
+  },
+  "integrations": {
+    "dish_eid": "hydra-7ba734db-67cb-4e91-8fdb-57aabc92fa4b",
+    "dish_script": "https://reservation.dish.co/widget.js",
+    "dish_status": "configuration identified in original HTML; no test booking submitted",
+    "deals_status": "public embed identified; web text reader only returned connection screen; do not invent live offers",
+    "menu": "https://alvolo.de/media/alvolo-karte.pdf",
+    "wolt_status": "Official Wolt listing identified, same address and phone; delivery prices and conditions remain on Wolt.",
+    "contact": {
+      "phone": "+494043275924",
+      "phone_display": "040 432 759 24",
+      "email": "info@alvolo.de",
+      "address": "Eppendorfer Weg 211, 20253 Hamburg",
+      "hours": "Mo–So 12–23 Uhr",
+      "instagram": "https://www.instagram.com/pizzeria_alvolo",
+      "tiktok": "https://www.tiktok.com/@alvolo_hh"
+    },
+    "wolt_url": "https://wolt.com/de/deu/hamburg/restaurant/pizzeria-al-volo"
+  },
+  "published": false,
+  "generated_new_video": false,
+  "browser_qa": "UNVERIFIED — preview daemon unavailable",
+  "original_photos": 14,
+  "original_videos": 3,
+  "menu": "PDF completo original e seleção interativa de 21 itens"
+}

@@ -1,0 +1,175 @@
+{
+  "source_url": "https://alvolo.de/media/alvolo-karte.pdf",
+  "retrieved_in_parent_research": "2026-11-05",
+  "source_date_is_retrieval_date_not_menu_issue_date": true,
+  "source_pdf_local": "tmp/alvolo-research/menu-original.pdf",
+  "source_pdf_sha256": "108038f168ed097307cc37d82782b35ff3c2d5e0e7277eba56f18321d26d99ed",
+  "source_pdf_bytes": 224336,
+  "pages": 2,
+  "inspection": "Both pages rendered and visually inspected; source prices cross-checked against extracted PDF text.",
+  "selection_scope": "21 selected items across 8 categories. This is not the complete menu; the complete official two-page PDF must remain available.",
+  "category_count": 8,
+  "item_count": 21,
+  "derived_name_ingredient_category_word_count": 105,
+  "selection_max_words": 180,
+  "currency": "EUR",
+  "tax_note_from_pdf": "Alle Preise in Euro inklusive Mehrwertsteuer",
+  "allergens": "No item-level allergen/dietary claims inferred. Original PDF says additives and allergens can be consulted at the bar.",
+  "photo_policy": "Category photographs may depict a shared table or another dish. They must not be described as exact photographs of every selected item. Dolci and soup categories use an ambience/table photo, not an invented dessert/soup photo.",
+  "wolt_comparison": {
+    "used_as_local_menu_source": false,
+    "reason": "Delivery menus can differ from the restaurant PDF. Parent source research found Mozzarella Caprese 14 in PDF versus 15 on Wolt, and Insalata Tonno 15 in PDF versus 16 on Wolt. Local selection uses PDF prices only; Wolt prices and delivery conditions stay on Wolt.",
+    "url": "https://wolt.com/de/deu/hamburg/restaurant/pizzeria-al-volo",
+    "comparison_evidence": "Wolt values were observed in the parent research output; this bounded task did not query Wolt again."
+  },
+  "items": [
+    {
+      "category": "pizza",
+      "name": "Ortolana",
+      "price_eur": 17,
+      "price_found_in_pdf": true,
+      "page": 1
+    },
+    {
+      "category": "pizza",
+      "name": "Margherita",
+      "price_eur": 12,
+      "price_found_in_pdf": true,
+      "page": 1
+    },
+    {
+      "category": "antipasti",
+      "name": "Burrata",
+      "price_eur": 14,
+      "price_found_in_pdf": true,
+      "page": 1
+    },
+    {
+      "category": "antipasti",
+      "name": "Crostini",
+      "price_eur": 8,
+      "price_found_in_pdf": true,
+      "page": 1
+    },
+    {
+      "category": "antipasti",
+      "name": "Arancini",
+      "price_eur": 8,
+      "price_found_in_pdf": true,
+      "page": 1
+    },
+    {
+      "category": "pasta",
+      "name": "Spaghetti Bolognese",
+      "price_eur": 18,
+      "price_found_in_pdf": true,
+      "page": 1
+    },
+    {
+      "category": "pasta",
+      "name": "Spaghetti Aglio e Olio",
+      "price_eur": 12,
+      "price_found_in_pdf": true,
+      "page": 1
+    },
+    {
+      "category": "pasta",
+      "name": "Gnocchi Al Volo",
+      "price_eur": 16,
+      "price_found_in_pdf": true,
+      "page": 1
+    },
+    {
+      "category": "salate",
+      "name": "Insalata Mista",
+      "price_eur": 12,
+      "price_found_in_pdf": true,
+      "page": 1
+    },
+    {
+      "category": "salate",
+      "name": "Mozzarella Caprese",
+      "price_eur": 14,
+      "price_found_in_pdf": true,
+      "page": 1
+    },
+    {
+      "category": "zuppe",
+      "name": "Zuppa di Pomodoro",
+      "price_eur": 7,
+      "price_found_in_pdf": true,
+      "page": 1
+    },
+    {
+      "category": "zuppe",
+      "name": "Minestrone",
+      "price_eur": 8,
+      "price_found_in_pdf": true,
+      "page": 1
+    },
+    {
+      "category": "dolci",
+      "name": "Tiramisù",
+      "price_eur": 9,
+      "price_found_in_pdf": true,
+      "page": 1
+    },
+    {
+      "category": "dolci",
+      "name": "Panna Cotta",
+      "price_eur": 9,
+      "price_found_in_pdf": true,
+      "page": 1
+    },
+    {
+      "category": "dolci",
+      "name": "Gelato al Tartufo",
+      "price_eur": 9,
+      "price_found_in_pdf": true,
+      "page": 1
+    },
+    {
+      "category": "getraenke",
+      "name": "Aperol Spritz",
+      "price_eur": 8.9,
+      "price_found_in_pdf": true,
+      "page": 2
+    },
+    {
+      "category": "getraenke",
+      "name": "Espresso",
+      "price_eur": 2.5,
+      "price_found_in_pdf": true,
+      "page": 2
+    },
+    {
+      "category": "getraenke",
+      "name": "Fritz Kola Original",
+      "price_eur": 4.5,
+      "price_found_in_pdf": true,
+      "page": 2
+    },
+    {
+      "category": "extra",
+      "name": "Burrata",
+      "price_eur": 6,
+      "price_found_in_pdf": true,
+      "page": 1
+    },
+    {
+      "category": "extra",
+      "name": "Rucola",
+      "price_eur": 2.5,
+      "price_found_in_pdf": true,
+      "page": 1
+    },
+    {
+      "category": "extra",
+      "name": "Garnelen",
+      "price_eur": 8,
+      "price_found_in_pdf": true,
+      "page": 1
+    }
+  ],
+  "js_syntax_check": "PASS"
+}

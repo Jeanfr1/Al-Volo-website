@@ -1,0 +1,142 @@
+[
+  {
+    "name": "Alvolo-hero.webp",
+    "url": "https://alvolo.de/media/Alvolo-hero.webp",
+    "bytes": 4342826,
+    "size": [
+      4240,
+      2384
+    ],
+    "sha256": "350b1364b9c5b03bb0438e6c351f4ddfd1d2afcc354bb27016de2a805f2c81e0"
+  },
+  {
+    "name": "uberuns.alvolo.webp",
+    "url": "https://alvolo.de/media/uberuns.alvolo.webp",
+    "bytes": 167146,
+    "size": [
+      1066,
+      1600
+    ],
+    "sha256": "2ae14355a743c35da11f031d7deb3e2d1ab5a6343aab7afb659b8781918b0977"
+  },
+  {
+    "name": "alvolo-1.webp",
+    "url": "https://alvolo.de/impressionen/alvolo-1.webp",
+    "bytes": 431952,
+    "size": [
+      4240,
+      2384
+    ],
+    "sha256": "27c34d2e25f313e28eba373d12fabc477345c5a659a6d0afe5a99850df4ac4e0"
+  },
+  {
+    "name": "alvolo-3.webp",
+    "url": "https://alvolo.de/impressionen/alvolo-3.webp",
+    "bytes": 773552,
+    "size": [
+      2832,
+      3776
+    ],
+    "sha256": "6a83cb3d74d97fe196617dbd69da95d136b58263599cdec6ecb447aac104105c"
+  },
+  {
+    "name": "alvolo-2.webp",
+    "url": "https://alvolo.de/impressionen/alvolo-2.webp",
+    "bytes": 592680,
+    "size": [
+      2832,
+      4240
+    ],
+    "sha256": "506258b482ebe25f85d503a2139cb63bcf9e5c4208bcad38926595db8484b610"
+  },
+  {
+    "name": "alvolo-5.webp",
+    "url": "https://alvolo.de/impressionen/alvolo-5.webp",
+    "bytes": 800536,
+    "size": [
+      4240,
+      2832
+    ],
+    "sha256": "59a0a5e3e2a77482539fb3030aa9cb0c3ccbf0c4f2df352e7d9a86940842bda7"
+  },
+  {
+    "name": "alvolo-4.webp",
+    "url": "https://alvolo.de/impressionen/alvolo-4.webp",
+    "bytes": 282526,
+    "size": [
+      2554,
+      3824
+    ],
+    "sha256": "c35b9bec68cd19a9c6943975cbff3bf08d63e783a966484116cbe379b64ecd33"
+  },
+  {
+    "name": "alvolo-13.webp",
+    "url": "https://alvolo.de/impressionen/alvolo-13.webp",
+    "bytes": 1020658,
+    "size": [
+      2832,
+      4240
+    ],
+    "sha256": "ce02fd923a27ba4d7e7b3a5cc28a19521dab471d09b18b53a55e176777da96b9"
+  },
+  {
+    "name": "alvolo-6.webp",
+    "url": "https://alvolo.de/impressionen/alvolo-6.webp",
+    "bytes": 1095280,
+    "size": [
+      4240,
+      2384
+    ],
+    "sha256": "f8c03c0fe021ebfc51d11c549487a6294cb366000c3d95a25c6058db52809796"
+  },
+  {
+    "name": "alvolo-9.webp",
+    "url": "https://alvolo.de/impressionen/alvolo-9.webp",
+    "bytes": 1095450,
+    "size": [
+      4240,
+      2384
+    ],
+    "sha256": "4a96db651c7f60664db6f75665b5021110d48e9e6d99a3ce16f1c13b18b2094b"
+  },
+  {
+    "name": "alvolo-8.webp",
+    "url": "https://alvolo.de/impressionen/alvolo-8.webp",
+    "bytes": 751912,
+    "size": [
+      4240,
+      2384
+    ],
+    "sha256": "05319b026ca8cecc6ecbac6b8f7423cdbdf047687c28521564b92da24a3f89fe"
+  },
+  {
+    "name": "alvolo-11.webp",
+    "url": "https://alvolo.de/impressionen/alvolo-11.webp",
+    "bytes": 638140,
+    "size": [
+      2832,
+      4240
+    ],
+    "sha256": "b5085cca3a959f97a1c40a52d89b9f6a13bbc3d5449df7513334fbc039f27ef0"
+  },
+  {
+    "name": "alvolo-10.webp",
+    "url": "https://alvolo.de/impressionen/alvolo-10.webp",
+    "bytes": 975782,
+    "size": [
+      2832,
+      4240
+    ],
+    "sha256": "2aa118685ac7131bf094e3a721d68b5d878a599215414bc815ee81211c8ed1fb"
+  },
+  {
+    "name": "alvolo-12.webp",
+    "url": "https://alvolo.de/impressionen/alvolo-12.webp",
+    "bytes": 1060578,
+    "size": [
+      2832,
+      4240
+    ],
+    "sha256": "926fb0d46cf0bccee551113cd6a87ce1e07b8548f601dbd292b7dc42d51a4469"
+  }
+]

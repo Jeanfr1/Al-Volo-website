@@ -1,0 +1,42 @@
+{
+  "selected_model": 1,
+  "hero_model": 1,
+  "body_model": 1,
+  "name": "Momenti Veri",
+  "language": "de",
+  "scenes": [
+    {
+      "id": "home",
+      "scene": "momenti-veri",
+      "background": "photographic"
+    },
+    {
+      "id": "speisekarte",
+      "scene": "circular-menu",
+      "background": "photo-and-paper"
+    },
+    {
+      "id": "konzept",
+      "scene": "forty-eight-hours",
+      "background": "solid"
+    },
+    {
+      "id": "erleben",
+      "scene": "original-films",
+      "background": "photographic"
+    },
+    {
+      "id": "pizzeria",
+      "scene": "hamburg-italia",
+      "background": "photographic"
+    },
+    {
+      "id": "reservieren",
+      "scene": "your-place",
+      "background": "photographic"
+    }
+  ],
+  "main_solid_scene_count": 1,
+  "generated_video": false,
+  "published": false
+}

@@ -1,0 +1,14 @@
+{
+  "name": "al-volo-website",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/serve.mjs 4437",
+    "shots": "node scripts/shots.mjs",
+    "qa": "node scripts/qa.mjs",
+    "kit": "python3 tools/verificar-kit.py"
+  },
+  "devDependencies": {
+    "playwright-core": "^1.56.1"
+  }
+}

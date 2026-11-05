@@ -1,0 +1,34 @@
+[
+  {
+    "service": "dish",
+    "url": "https://reservation.dish.co/widget/hydra-7ba734db-67cb-4e91-8fdb-57aabc92fa4b",
+    "http_status": 200,
+    "bytes": 17043,
+    "frame_options": null,
+    "meaning": "HTTP reachability only; no booking or browser interaction tested"
+  },
+  {
+    "service": "menu",
+    "url": "https://alvolo.de/media/alvolo-karte.pdf",
+    "http_status": 200,
+    "bytes": 224336,
+    "frame_options": null,
+    "meaning": "HTTP reachability only; no booking or browser interaction tested"
+  },
+  {
+    "service": "legal",
+    "url": "https://alvolo.de/impressum",
+    "http_status": 200,
+    "bytes": 6041,
+    "frame_options": null,
+    "meaning": "HTTP reachability only; no booking or browser interaction tested"
+  },
+  {
+    "service": "privacy",
+    "url": "https://alvolo.de/datenschutz",
+    "http_status": 200,
+    "bytes": 7853,
+    "frame_options": null,
+    "meaning": "HTTP reachability only; no booking or browser interaction tested"
+  }
+]

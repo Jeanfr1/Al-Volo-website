@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#C41E3A"><title>Al Volo — Pizza, Pasta & gute Zeit in Hamburg</title>
+  <meta name="description" content="Pizzeria Al Volo am Eppendorfer Weg 211 in Hamburg. Entdecke die Speisekarte, Originalvideos und den Mittagstisch oder reserviere deinen Tisch mit DISH.">
+  <link rel="icon" href="brand/logo-original.png" type="image/png">
+  <link rel="preload" href="fonts/Caprasimo-Regular.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="photos/alvolo-2.webp" as="image" fetchpriority="high">
+  <link rel="stylesheet" href="styles.css">
+  <script src="content.js" defer></script><script src="menu-data.js" defer></script><script src="app.js" defer></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","name":"Pizzeria Al Volo","url":"https://alvolo.de/","telephone":"+494043275924","email":"info@alvolo.de","servesCuisine":"Italienisch","address":{"@type":"PostalAddress","streetAddress":"Eppendorfer Weg 211","postalCode":"20253","addressLocality":"Hamburg","addressCountry":"DE"},"openingHours":"Mo-Su 12:00-23:00","hasMenu":"https://alvolo.de/media/alvolo-karte.pdf"}</script>
+</head>
+<body>
+  <a class="skip" href="#speisekarte">Zum Inhalt springen</a>
+  <main>
+    <section id="home" class="hero" data-scene="momenti-veri" data-background="photographic" aria-labelledby="hero-title">
+      <div class="hero-underlay" aria-hidden="true"><img src="photos/alvolo-1.webp" width="1800" height="1012" alt=""></div>
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="canvas hero-canvas">
+        <div class="hero-portrait" aria-hidden="true"><img src="photos/alvolo-2.webp" width="1202" height="1800" alt="" fetchpriority="high" decoding="async"></div>
+        <header class="header">
+          <a class="seal" href="#home" aria-label="Al Volo — Startseite"><img src="brand/logo-original.png" width="1000" height="1000" alt="Al Volo Pizzeria — originales AV-Siegel"></a>
+          <nav class="desktop-nav" aria-label="Hauptnavigation"><a href="#konzept">Konzept</a><a href="#speisekarte">Speisekarte</a><a href="#erleben">Erleben</a><a href="#erleben" data-action="deals">Mittagstisch</a><a class="button button-red" href="https://reservation.dish.co/widget/hydra-7ba734db-67cb-4e91-8fdb-57aabc92fa4b" data-action="book">Tisch reservieren</a></nav>
+          <details class="mobile-nav"><summary>Menü <span aria-hidden="true">☰</span></summary><nav aria-label="Mobile Navigation"><a href="#konzept">Konzept</a><a href="#speisekarte">Speisekarte</a><a href="#erleben">Erleben</a><a href="#erleben" data-action="deals">Mittagstisch & Deals</a><a href="#reservieren">Tisch reservieren</a><a href="#kontakt">Kontakt</a></nav></details>
+        </header>
+        <div class="hero-copy"><h1 id="hero-title"><span>Hier</span><span>schmeckt</span><span>das Leben.</span></h1><p>Pizza, Pasta & gute Zeit. Hamburg.</p><div class="hero-actions"><a class="button" href="#speisekarte">Speisekarte entdecken</a><a class="button" href="https://reservation.dish.co/widget/hydra-7ba734db-67cb-4e91-8fdb-57aabc92fa4b" data-action="book">Tisch reservieren</a></div></div>
+        <div class="hero-food" aria-hidden="true"><img src="photos/alvolo-9.webp" width="1800" height="1012" alt="" decoding="async"></div>
+      </div>
+    </section>
+
+    <section id="speisekarte" class="menu-scene" data-scene="circular-menu" data-background="photo-and-paper" aria-labelledby="menu-title">
+      <div class="canvas menu-canvas">
+        <figure class="macro-viewport" aria-hidden="true"><img id="menu-macro" class="menu-macro" src="photos/alvolo-6.webp" width="1800" height="1012" alt="" loading="lazy" decoding="async"></figure>
+        <svg class="ingredient-gesture" viewBox="0 0 220 220" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2"><path d="M38 191C14 108 50 48 153 20M50 196C28 99 93 29 185 28M78 147C108 90 151 87 191 99C170 139 127 154 78 147Z"/><path d="M93 139L173 107M134 145L126 119M161 134L151 112"/></g></svg>
+        <div class="menu-copy" data-reveal><h2 id="menu-title">Worauf<br>hast du Lust?</h2><div class="category-rail" role="tablist" aria-label="Speisekarten-Kategorie"><button id="category-antipasti" role="tab" aria-selected="false" aria-controls="menu-selection" data-category="antipasti" tabindex="-1">Antipasti</button><button id="category-pizza" role="tab" aria-selected="true" aria-controls="menu-selection" data-category="pizza">Pizza</button><button id="category-pasta" role="tab" aria-selected="false" aria-controls="menu-selection" data-category="pasta" tabindex="-1">Pasta</button><button id="category-dolci" role="tab" aria-selected="false" aria-controls="menu-selection" data-category="dolci" tabindex="-1">Dolci</button><button id="category-getraenke" role="tab" aria-selected="false" aria-controls="menu-selection" data-category="getraenke" tabindex="-1">Getränke</button></div>
+        <div id="menu-selection" class="menu-selection" role="tabpanel" aria-labelledby="category-pizza"><label class="sr-only" for="dish-choice">Gericht aus der Auswahl</label><select id="dish-choice"><option value="0">Ortolana · 17 €</option><option value="1">Margherita · 12 €</option></select><a class="text-link" href="Speisekarte-Al-Volo-Original.pdf" target="_blank" rel="noopener noreferrer">Karte als PDF ↗</a></div>
+        <p id="dish-description" class="dish-description">San-Marzano-Tomaten, Fior di Latte, Saisongemüse</p><a class="menu-more text-link" href="Speisekarte-Al-Volo-Original.pdf" data-action="menu">Weitere Kategorien & Auswahl →</a><p class="fineprint">Eine Auswahl aus unserer Karte. Alle Gerichte, Getränke und Extras im PDF. Fotos zeigen Einblicke aus unserer Pizzeria.</p><noscript><p><a href="Speisekarte-Al-Volo-Original.pdf">Die vollständige Karte als PDF öffnen →</a></p></noscript></div>
+      </div>
+    </section>
+
+    <section id="konzept" class="dough-scene" data-scene="forty-eight-hours" data-background="solid" aria-labelledby="dough-title">
+      <div class="canvas dough-canvas"><div class="dough-copy" data-reveal><span class="dough-number" aria-hidden="true">48</span><h2 id="dough-title"><span class="sr-only">48 </span>Stunden.<br>Für diesen Moment.</h2><div class="dough-actions"><a class="button" href="https://alvolo.de/#ueber-uns" data-action="story">Unser Konzept</a><a class="button" href="tel:+494043275924" data-action="dough">Teig für zu Hause</a></div></div><div class="chef-window" aria-hidden="true"><img src="photos/uberuns.alvolo.webp" width="1066" height="1600" alt="" loading="lazy" decoding="async"></div><svg class="dough-line" viewBox="0 0 350 120" aria-hidden="true"><path d="M6 100C102 17 222 7 341 53M12 111C117 36 235 34 335 70" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
+    </section>
+
+    <section id="erleben" class="reels-scene" data-scene="original-films" data-background="photographic" aria-labelledby="reels-title">
+      <img class="reels-background" src="photos/alvolo-8.webp" width="1800" height="1012" alt="" loading="lazy" decoding="async" aria-hidden="true"><div class="reels-shade" aria-hidden="true"></div>
+      <div class="canvas reels-canvas"><h2 id="reels-title" data-reveal>Vom Teig<br>zum Tisch.</h2><div class="reel-strip" aria-label="Drei Originalvideos aus der Pizzeria"><a class="reel" href="videos/video-2-alvolo.mp4" data-video="2" aria-label="Originalvideo Einblicke 01 abspielen"><img src="photos/reel-2.webp" width="576" height="1024" alt="" loading="lazy"><span class="play" aria-hidden="true">▶</span><span class="reel-count">01</span></a><a class="reel" href="videos/video-1-alvolo.mp4" data-video="1" aria-label="Originalvideo Einblicke 02 abspielen"><img src="photos/reel-1.webp" width="576" height="1024" alt="" loading="lazy"><span class="play" aria-hidden="true">▶</span><span class="reel-count">02</span></a><a class="reel" href="videos/video-3-alvolo.mp4" data-video="3" aria-label="Originalvideo Einblicke 03 abspielen"><img src="photos/reel-3.webp" width="576" height="1024" alt="" loading="lazy"><span class="play" aria-hidden="true">▶</span><span class="reel-count">03</span></a></div><a class="button button-cream deals-button" href="https://alvolo.de/#live-video" data-action="deals">Mittagstisch & Deals ansehen <span aria-hidden="true">→</span></a></div>
+    </section>
+
+    <section id="pizzeria" class="place-scene" data-scene="hamburg-italia" data-background="photographic" aria-labelledby="place-title">
+      <img class="place-background" src="photos/Alvolo-hero.webp" width="1800" height="1012" alt="" loading="lazy" decoding="async" aria-hidden="true"><div class="place-shade" aria-hidden="true"></div>
+      <div class="canvas place-canvas"><h2 id="place-title" data-reveal>Ein Stück<br>Hamburg.<br>Viel Italien.</h2><div class="place-actions"><a href="https://alvolo.de/#impressionen" data-action="gallery">Impressionen</a><a href="https://wolt.com/de/deu/hamburg/restaurant/pizzeria-al-volo" target="_blank" rel="noopener noreferrer">Auf Wolt bestellen ↗</a><a href="https://www.google.com/search?hl=de-DE&amp;gl=de&amp;q=Pizzeria+Al+Volo,+Eppendorfer+Weg+211,+20253+Hamburg&amp;ludocid=3607360429220122324#lrd=0x47b18f4cd0376435:0x320feb32a0774ed4,3" target="_blank" rel="noopener noreferrer">Google-Bewertung ↗</a><a href="https://www.instagram.com/pizzeria_alvolo" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://www.tiktok.com/@alvolo_hh" target="_blank" rel="noopener noreferrer">TikTok ↗</a></div><a class="button gift-link" href="https://alvolo.de/belohnung" target="_blank" rel="noopener noreferrer">Geschenk entdecken ↗</a><div class="place-pizza" aria-hidden="true"><img src="photos/alvolo-5.webp" width="1800" height="1202" alt="" loading="lazy" decoding="async"></div></div>
+    </section>
+
+    <section id="reservieren" class="booking-scene" data-scene="your-place" data-background="photographic" aria-labelledby="booking-title">
+      <picture class="booking-background" aria-hidden="true"><source media="(max-width:720px)" srcset="photos/alvolo-12.webp"><img src="photos/Alvolo-hero.webp" width="1800" height="1012" alt="" loading="lazy" decoding="async"></picture><div class="booking-shade" aria-hidden="true"></div>
+      <div class="canvas booking-canvas"><h2 id="booking-title" data-reveal>Dein Platz<br>wartet.</h2><div class="booking-card" data-reveal><h3>Reservieren mit DISH</h3><p class="booking-steps"><span>Datum</span><span>Uhrzeit</span><span>Personen</span></p><p>Wähle deinen Tisch direkt im Buchungssystem.</p><a class="button button-red" href="https://reservation.dish.co/widget/hydra-7ba734db-67cb-4e91-8fdb-57aabc92fa4b" data-action="book">Verfügbarkeit prüfen <span aria-hidden="true">→</span></a></div>
+      <footer id="kontakt" class="footer"><address><a href="https://www.google.com/maps/search/?api=1&amp;query=Pizzeria+Al+Volo+Eppendorfer+Weg+211+20253+Hamburg" target="_blank" rel="noopener noreferrer">Eppendorfer Weg 211 · 20253 Hamburg ↗</a></address><a href="tel:+494043275924">040 432 759 24</a><span>Mo–So · 12–23 Uhr</span><a href="mailto:info@alvolo.de">info@alvolo.de</a><div class="footer-links"><a href="https://alvolo.de/impressum" target="_blank" rel="noopener noreferrer">Impressum</a><a href="https://alvolo.de/datenschutz" target="_blank" rel="noopener noreferrer">Datenschutz</a><a href="https://maps.google.com/maps?q=Eppendorfer+Weg+211%2C+20253+Hamburg&amp;z=16&amp;output=embed" data-action="map">Karte anzeigen</a><button type="button" class="js-only" data-action="settings">Einstellungen</button><a href="#home">Nach oben ↑</a></div></footer></div>
+    </section>
+  </main>
+
+  <button id="motion-toggle" class="motion-toggle js-only" type="button" aria-pressed="false" aria-label="Animationen pausieren"><span aria-hidden="true">Ⅱ</span><span>Bewegung</span></button>
+  <dialog id="utility-dialog" aria-labelledby="utility-title"><div class="dialog-heading"><img src="brand/logo-original.png" width="1000" height="1000" alt="Al Volo Pizzeria"><h2 id="utility-title">Al Volo</h2><button id="utility-close" type="button" aria-label="Dialog schließen">×</button></div><div id="utility-content"></div></dialog>
+</body>
+</html>

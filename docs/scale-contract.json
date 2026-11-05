@@ -1,0 +1,31 @@
+{
+  "baseline_px": 1024,
+  "max_desktop_scale": 1,
+  "mobile_breakpoint_px": 720,
+  "canvas_css": "width:min(100%,var(--design-width)); margin-inline:auto",
+  "u_css": "min(1px,calc(100vw / 1024))",
+  "desktop_cap": {
+    "hero_title_px": 76,
+    "hero_portrait_width_px": 560,
+    "menu_macro_width_px": 740
+  },
+  "full_bleed": [
+    "scene colors",
+    "panoramic photographic backgrounds"
+  ],
+  "forbidden": [
+    "global scaling by raster board width",
+    "hero or macro object-fit:cover",
+    "hero or macro background-size:cover",
+    "whole-board image as page"
+  ],
+  "mobile": "reflow with explicit fonts and crops",
+  "test_widths": [
+    375,
+    768,
+    1024,
+    1440,
+    1920
+  ],
+  "browser_qa": "UNVERIFIED — preview daemon unavailable"
+}

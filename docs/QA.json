@@ -1,0 +1,573 @@
+{
+  "date": "2026-11-05",
+  "status": "PASS",
+  "checks": 112,
+  "passed": 112,
+  "failed": 0,
+  "browser_qa": "UNVERIFIED",
+  "browser_reason": "Managed preview daemon unavailable at /tmp/sites-previewd/requests. No browser rendering or interaction test completed.",
+  "scale_verification": "CSS contract and font metrics only; DOM/visual review pending",
+  "external_services": "Configured original destinations. HTTP reachability does not verify the full booking/display flow. No reservation/order submitted.",
+  "results": [
+    {
+      "name": "Modelo 1 no hero e corpo",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Seis cenas na ordem aprovada",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Um contraste principal de cor lisa",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Idioma alemão e H1 único",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "IDs únicos",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Site estático sem identidade de outro cliente",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Sem vídeo gerado ou publicação",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Prancha não é usada como fundo do site",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Caminhos HTML resolvem",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "name": "ARIA e alt resolvem",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "name": "Dimensões de imagens declaradas corretas",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "name": "Novas abas protegidas",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "name": "Recursos CSS locais",
+      "pass": true,
+      "detail": "['fonts/Caprasimo-Regular.woff', 'fonts/DMSans-Regular.woff', 'fonts/DMSans-SemiBold.woff', 'fonts/DMSans-Bold.woff']"
+    },
+    {
+      "name": "CSS com delimitadores equilibrados",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Fontes e scripts de renderização locais",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Sintaxe app.js",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Sintaxe content.js",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Sintaxe menu-data.js",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Dados Hamburg corretos",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Sem dados de outros clientes",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Todos os links de chamada corretos",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "JSON-LD consistente",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "DISH original e link real",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Display original preservado",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Carregamento externo por escolha",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Alternativas externas e telefone",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Sem formulário/confirmador fictício",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Páginas oficiais legais e promoção",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Menu identificado como seleção",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Oito categorias e 21 itens",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Ortolana/Margherita com preços da carta",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Carta original preservada",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Categorias apontam para fotos locais",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Busca e abas com teclado",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Retorno de foco e fechamento nativo",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Vídeos por ação e limpeza de áudio",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Galeria com 12 fotos e teclado",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Preferências externas e movimento separadas",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Movimento reduzido e economia de dados",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Scroll nativo e sem loop contínuo",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Interrupção em aba oculta",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Base 1024 e teto 1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Canvas limitado e centralizado",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Unidade CSS com teto",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Nenhum multiplicador pelo board de 760 px",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Teto do título fixado",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Larguras de foto e macro explícitas",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Hero e macro sem cover",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Fotos principais com altura natural",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Sem palco hero de uma tela",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Mobile com reflow próprio",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Métrica do título em 375",
+      "pass": true,
+      "detail": "221.8px estimados / 331.0px; não é navegador"
+    },
+    {
+      "name": "Métrica do título em 768",
+      "pass": true,
+      "detail": "351.2px estimados / 420.0px; não é navegador"
+    },
+    {
+      "name": "Métrica do título em 1024",
+      "pass": true,
+      "detail": "468.2px estimados / 560.0px; não é navegador"
+    },
+    {
+      "name": "Tamanho desktop estável em 1024",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Métrica do título em 1440",
+      "pass": true,
+      "detail": "468.2px estimados / 560.0px; não é navegador"
+    },
+    {
+      "name": "Tamanho desktop estável em 1440",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Métrica do título em 1920",
+      "pass": true,
+      "detail": "468.2px estimados / 560.0px; não é navegador"
+    },
+    {
+      "name": "Tamanho desktop estável em 1920",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Original preservado: Alvolo-hero.webp",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Original preservado: uberuns.alvolo.webp",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Original preservado: alvolo-1.webp",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Original preservado: alvolo-3.webp",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Original preservado: alvolo-2.webp",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Original preservado: alvolo-5.webp",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Original preservado: alvolo-4.webp",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Original preservado: alvolo-13.webp",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Original preservado: alvolo-6.webp",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Original preservado: alvolo-9.webp",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Original preservado: alvolo-8.webp",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Original preservado: alvolo-11.webp",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Original preservado: alvolo-10.webp",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Original preservado: alvolo-12.webp",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Vídeo original preservado: video-1-alvolo.mp4",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Vídeo original preservado: video-2-alvolo.mp4",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Vídeo original preservado: video-3-alvolo.mp4",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Foto/poster decodifica: Alvolo-hero.webp",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Foto/poster decodifica: reel-1.webp",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Foto/poster decodifica: alvolo-1.webp",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Foto/poster decodifica: alvolo-6.webp",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Foto/poster decodifica: uberuns.alvolo.webp",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Foto/poster decodifica: alvolo-10.webp",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Foto/poster decodifica: alvolo-11.webp",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Foto/poster decodifica: alvolo-4.webp",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Foto/poster decodifica: alvolo-8.webp",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Foto/poster decodifica: alvolo-12.webp",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Foto/poster decodifica: alvolo-13.webp",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Foto/poster decodifica: alvolo-9.webp",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Foto/poster decodifica: alvolo-5.webp",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Foto/poster decodifica: alvolo-2.webp",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Foto/poster decodifica: reel-3.webp",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Foto/poster decodifica: reel-2.webp",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Foto/poster decodifica: alvolo-3.webp",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Logo PNG RGBA transparente",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Logo original sem redesenho",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Logo pública igual à de marca",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Fonte oficial: Caprasimo-Regular.ttf",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Fonte oficial: Caprasimo-OFL.txt",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Fonte oficial: DMSans-Variable.ttf",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Fonte oficial: DMSans-OFL.txt",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Quatro WOFF locais",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Glifos alemães: DMSans-SemiBold.woff",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Glifos alemães: Caprasimo-Regular.woff",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Glifos alemães: DMSans-Bold.woff",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Glifos alemães: DMSans-Regular.woff",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Licença OFL: Caprasimo",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Licença OFL: DMSans",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Hashes dos assets correspondem",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "name": "Nenhum arquivo vazio",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Seis roteiros incluídos",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Regra reutilizável incluída",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Links do guia resolvem",
+      "pass": true,
+      "detail": "[]"
+    }
+  ]
+}

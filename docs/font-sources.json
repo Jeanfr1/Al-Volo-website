@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Caprasimo-Regular.ttf",
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/caprasimo/Caprasimo-Regular.ttf",
+    "bytes": 41660,
+    "sha256": "786ab84ee787d40df55be78cb4361e485a1c6687195cbcccf3538cb5e46ced90"
+  },
+  {
+    "name": "Caprasimo-OFL.txt",
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/caprasimo/OFL.txt",
+    "bytes": 4403,
+    "sha256": "755d165efdbad1ad4a7840aa1f2484b0111627993e162bdcfb25fb2c277db955"
+  },
+  {
+    "name": "DMSans-Variable.ttf",
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/dmsans/DMSans%5Bopsz,wght%5D.ttf",
+    "bytes": 240164,
+    "sha256": "8cd08d97e89c24d0aa92edd2f0f4c8ee6195eee9b7c9f154865a58b02f0c1c0d"
+  },
+  {
+    "name": "DMSans-OFL.txt",
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/dmsans/OFL.txt",
+    "bytes": 4482,
+    "sha256": "9af36190332437f5ecd09974de43c1f7c77a310a996cdd8ceb25628b458840e1"
+  }
+]

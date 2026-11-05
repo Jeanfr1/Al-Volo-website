@@ -1,0 +1,45 @@
+{
+  "kind": "static font and CSS-contract calculations, not browser DOM measurement",
+  "rows": [
+    {
+      "viewport": 375,
+      "canvas": 375,
+      "hero_title": 36,
+      "hero_portrait": 430,
+      "menu_macro": 610,
+      "max_title_line_estimated": 221.79
+    },
+    {
+      "viewport": 768,
+      "canvas": 768,
+      "hero_title": 57.0,
+      "hero_portrait": 420.0,
+      "menu_macro": 555.0,
+      "max_title_line_estimated": 351.16
+    },
+    {
+      "viewport": 1024,
+      "canvas": 1024,
+      "hero_title": 76,
+      "hero_portrait": 560,
+      "menu_macro": 740,
+      "max_title_line_estimated": 468.22
+    },
+    {
+      "viewport": 1440,
+      "canvas": 1024,
+      "hero_title": 76,
+      "hero_portrait": 560,
+      "menu_macro": 740,
+      "max_title_line_estimated": 468.22
+    },
+    {
+      "viewport": 1920,
+      "canvas": 1024,
+      "hero_title": 76,
+      "hero_portrait": 560,
+      "menu_macro": 740,
+      "max_title_line_estimated": 468.22
+    }
+  ]
+}
