@@ -100,7 +100,8 @@ for (const [w, h] of [[1440, 790], [390, 844]]) {
   // films
   await page.evaluate(() => document.querySelector('#erleben').scrollIntoView());
   await page.click('.reel >> nth=0');
-  await page.waitForTimeout(400);
+  // metadata arrives over the network on the live site: wait for it instead of a fixed pause
+  await page.waitForFunction(() => document.querySelector('#utility-content video')?.readyState >= 1, null, { timeout: 5000 }).catch(() => {});
   const vid = await page.evaluate(() => { const v = document.querySelector('#utility-content video'); return v && { src: v.getAttribute('src'), controls: v.controls, ready: v.readyState, poster: v.getAttribute('poster') }; });
   check(`${tag} film plays in dialog with controls`, vid && vid.controls && /videos\/video-2-alvolo\.mp4/.test(vid.src) && vid.ready >= 1, JSON.stringify(vid));
   const filmClosed = await closeDialog();

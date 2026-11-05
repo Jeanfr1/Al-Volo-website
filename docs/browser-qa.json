@@ -548,7 +548,7 @@
     {
       "name": "390x844 film plays in dialog with controls",
       "pass": true,
-      "detail": "{\"src\":\"videos/video-2-alvolo.mp4\",\"controls\":true,\"ready\":4,\"poster\":\"photos/posters/video-2.webp\"}"
+      "detail": "{\"src\":\"videos/video-2-alvolo.mp4\",\"controls\":true,\"ready\":1,\"poster\":\"photos/posters/video-2.webp\"}"
     },
     {
       "name": "390x844 film removed on close",

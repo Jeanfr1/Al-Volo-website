@@ -90,4 +90,5 @@ O site em `site/` foi conferido no navegador contra a prancha aprovada. O `READM
 - **Logo**: `site/brand/logo-original.png` continua idêntico ao da marca. O selo e os favicons usam cópias reduzidas do mesmo arquivo (`seal-320.webp`, `icon-64.png`, `icon-180.png`), sem redesenho.
 - **Animações**: abertura e parallax do roteiro, mais uma entrada por cena (íris do macro, manjericão, pincel, janela do chef, 48 contando, rama de tomate, cartões de vídeo, fachada, pizza, sublinhado). Movimento reduzido, pausa e economia de dados mostram o estado final.
 - **Validação**: `npm run qa` (126 verificações em 8 tamanhos de janela, em `docs/browser-qa.json`) e `npm run manifest` (hashes, verificador do kit e `MANIFEST.sha256`).
+- **Publicação**: https://al-volo-hamburg.vercel.app (Vercel, projeto `al-volo-hamburg`, ligado ao GitHub: cada push no `main` publica). Fica com `noindex` até o domínio próprio.
 - **Pendências do cliente**: marcadas como `TODO(alvolo)` no código e listadas no `README.md`.

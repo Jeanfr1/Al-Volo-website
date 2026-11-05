@@ -5,7 +5,7 @@
 <h3>A one-page website for a neighbourhood pizzeria in Hamburg, where every scene opens like a camera iris onto a real moment at the restaurant.</h3>
 
 <p>
-  <a href="#deployment"><strong>🌐 Live site</strong></a>
+  <a href="https://al-volo-hamburg.vercel.app"><strong>🌐 Live site</strong></a>
   &nbsp;·&nbsp;
   <a href="#hero-animation"><strong>🎬 How the hero works</strong></a>
   &nbsp;·&nbsp;
@@ -13,7 +13,7 @@
 </p>
 
 <p>
-  <a href="#deployment"><img src="https://img.shields.io/badge/Vercel-Ready-8E1123?style=for-the-badge&logo=vercel&logoColor=white" alt="Ready for Vercel" /></a>
+  <a href="https://al-volo-hamburg.vercel.app"><img src="https://img.shields.io/badge/Vercel-Live-8E1123?style=for-the-badge&logo=vercel&logoColor=white" alt="Live on Vercel" /></a>
   <img src="https://img.shields.io/badge/HTML5-No_build-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5, no build step" />
   <img src="https://img.shields.io/badge/CSS-1024--unit_canvas-1572B6?style=for-the-badge&logo=css&logoColor=white" alt="CSS on a 1024-unit canvas" />
   <img src="https://img.shields.io/badge/JavaScript-Vanilla-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="Vanilla JavaScript" />
@@ -42,7 +42,7 @@ Six scenes in German take visitors from the first impression to a **table at DIS
 ## 🎬 The hero animation
 
 <div align="center">
-  <a href="#deployment"><img src=".github/assets/hero-scroll.gif" alt="Scrolling through the page: the portrait opens in a circular iris, then each scene enters with its own gesture down to the DISH reservation card" width="100%" /></a>
+  <a href="https://al-volo-hamburg.vercel.app"><img src=".github/assets/hero-scroll.gif" alt="Scrolling through the page: the portrait opens in a circular iris, then each scene enters with its own gesture down to the DISH reservation card" width="100%" /></a>
   <sub>Every entrance played frame by frame from the running page · captured at 1440 × 900</sub>
 </div>
 
@@ -213,9 +213,9 @@ Al-Volo-website/
 
 ## 🚀 Deployment
 
-Ready for **Vercel** as a static site: no build command, and `site/` is the output. Once the project is connected to this repository, every push to `main` ships to production.
+Hosted on **Vercel** as a static site and connected to this repository: every push to `main` ships to production. There is no build command, and only `site/` is published.
 
-**Live site:** not published yet. The link goes here after the first deploy.
+**Live site:** [al-volo-hamburg.vercel.app](https://al-volo-hamburg.vercel.app)
 
 | Setting          | Value          |
 | :--------------- | :------------- |
@@ -234,7 +234,7 @@ Items waiting on the client. Each one is marked `TODO(alvolo)` in `site/`.
 - [ ] Confirm the dish selection and prices against the current authorised menu (`menu-data.js`)
 - [ ] Confirm the opening hours (`content.js`, footer and structured data)
 - [ ] Keep the voucher, Impressum and Datenschutz routes on alvolo.de if that hosting changes (`content.js`)
-- [ ] Custom domain, then remove `noindex` and add `canonical`, `og:url` and an absolute `og:image` (`index.html`, `vercel.json`, `robots.txt`)
+- [ ] Custom domain, then remove `noindex`, add `canonical` and `og:url`, and move `og:image` to it (`index.html`, `vercel.json`, `robots.txt`)
 
 <br />
 
