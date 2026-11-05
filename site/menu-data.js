@@ -1,4 +1,5 @@
 /* Auswahl aus der offiziellen PDF-Karte; vollständige Karte separat verfügbar. */
+/* TODO(alvolo): confirm the selection and prices against the current authorised menu before launch */
 window.ALVOLO_MENU=Object.freeze({
   "sourceDate": "2026-11-05",
   "sourceUrl": "https://alvolo.de/media/alvolo-karte.pdf",

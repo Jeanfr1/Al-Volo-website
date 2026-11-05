@@ -1,0 +1,19 @@
+# Only site/ is published. Entries are anchored: an unanchored "fonts" would also drop site/fonts.
+/brand
+/docs
+/fonts
+/images
+/motion
+/process
+/references
+/roteiros
+/tools
+/studio
+/scripts
+/.github
+/GUIA-VISUAL.html
+/LEIA-ME-KIT.md
+/MANIFEST.sha256
+/README.md
+/site/.openai
+/node_modules

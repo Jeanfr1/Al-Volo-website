@@ -1,13 +1,13 @@
 {
-  "date": "2026-11-05",
+  "date": "2026-11-06",
   "status": "PASS",
   "checks": 112,
   "passed": 112,
   "failed": 0,
-  "browser_qa": "UNVERIFIED",
-  "browser_reason": "Managed preview daemon unavailable at /tmp/sites-previewd/requests. No browser rendering or interaction test completed.",
-  "scale_verification": "CSS contract and font metrics only; DOM/visual review pending",
-  "external_services": "Configured original destinations. HTTP reachability does not verify the full booking/display flow. No reservation/order submitted.",
+  "browser_qa": "PASS 126/126 (2026-11-05)",
+  "browser_reason": "scripts/qa.mjs in Chromium (Playwright): density gates at 1440x790, 1280x650, 1536x730, 1920x950, 1024x768, 768x1024, 390x844, 375x667, overflow, console errors, every dialog and link, motion on/off, visible copy scan. External services blocked during QA; only their URLs were checked.",
+  "scale_verification": "CSS contract, font metrics and DOM measurement in the browser QA",
+  "external_services": "Configured original destinations. No reservation/order submitted.",
   "results": [
     {
       "name": "Modelo 1 no hero e corpo",
@@ -72,7 +72,7 @@
     {
       "name": "Recursos CSS locais",
       "pass": true,
-      "detail": "['fonts/Caprasimo-Regular.woff', 'fonts/DMSans-Regular.woff', 'fonts/DMSans-SemiBold.woff', 'fonts/DMSans-Bold.woff']"
+      "detail": "['fonts/Caprasimo-Regular.woff', 'fonts/DMSans-Regular.woff', 'fonts/DMSans-SemiBold.woff', 'fonts/DMSans-Bold.woff', 'shapes/wave-menu.svg', 'shapes/wave-dough.svg', 'shapes/wave-reels.svg', 'shapes/wave-place.svg', 'shapes/wave-booking.svg']"
     },
     {
       "name": "CSS com delimitadores equilibrados",

@@ -19,8 +19,10 @@
     resetDialog();title.textContent=heading;dialog.dataset.mode=mode;if(!dialog.open){returnFocus=trigger||document.activeElement;dialog.showModal();}
     return true;
   }
-  function close(){dialog.close();}
+  function stopMedia(){cleanup();cleanup=()=>{};}
+  function close(){stopMedia();dialog.close();}
   $('#utility-close').addEventListener('click',close);
+  dialog.addEventListener('cancel',stopMedia);
   dialog.addEventListener('close',()=>{resetDialog();returnFocus?.focus();});
   dialog.addEventListener('click',e=>{if(e.target!==dialog)return;const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)close();});
 
@@ -50,7 +52,7 @@
     function draw(){results.replaceChildren();let count=0;for(const c of M.categories){if(select.value!=='all'&&select.value!==c.id)continue;const items=c.items.filter(i=>normal(i.name+' '+i.description).includes(normal(search.value.trim())));if(!items.length)continue;const group=node('section',undefined,'menu-group');group.append(node('h3',c.label));for(const i of items){count++;const item=node('article',undefined,'menu-item'),header=node('header');header.append(node('span',i.name),node('span',money(i.price),'price'));item.append(header);if(i.description)item.append(node('p',i.description));group.append(item);}results.append(group);}if(!count)results.append(node('p','In dieser Auswahl wurde nichts gefunden. Schau auch in die vollständige PDF-Karte.','no-result'));}
     search.addEventListener('input',draw);select.addEventListener('change',draw);draw();
     const actions=node('div',undefined,'dialog-actions');actions.append(link('Vollständige Karte als PDF ↗','Speisekarte-Al-Volo-Original.pdf','button button-red',true),link('Bei Fragen anrufen','tel:'+C.phone));
-    content.append(tools,results,actions,node('p','Alle Preise in Euro inklusive Mehrwertsteuer. Fotos auf der Startseite zeigen Aufnahmen aus der Pizzeria und sind nicht jedem ausgewählten Gericht einzeln zugeordnet.','video-note'));search.focus();return true;
+    content.append(tools,results,actions,node('p','Alle Preise in Euro inklusive Mehrwertsteuer.','video-note'));search.focus();return true;
   }
 
   /* Externe Dienste erst auf Wunsch laden; echte Dienste, keine Scheinintegrationen. */
@@ -79,11 +81,11 @@
 
   function showVideo(id,trigger){
     const item=C.videos.find(v=>v.id===Number(id));if(!item||!openDialog(item.title,trigger,'video'))return false;
-    const video=node('video');video.className='video-player';video.src=item.src;video.poster=item.poster;video.controls=true;video.playsInline=true;video.preload='metadata';video.setAttribute('aria-label','Originalvideo der Pizzeria Al Volo');content.append(video,node('p','Originalvideo der Pizzeria. Ton und Wiedergabe steuerst du am Player.','video-note'));cleanup=()=>{video.pause();video.removeAttribute('src');video.load();};video.play().catch(()=>{});return true;
+    const video=node('video');video.className='video-player';video.src=item.src;video.poster=item.poster;video.controls=true;video.playsInline=true;video.preload='metadata';video.setAttribute('aria-label','Video aus der Pizzeria Al Volo');content.append(video,node('p','Ton und Wiedergabe steuerst du direkt im Player.','video-note'));cleanup=()=>{video.pause();video.removeAttribute('src');video.load();};video.play().catch(()=>{});return true;
   }
   function showGallery(trigger){
     if(!openDialog('Impressionen',trigger,'gallery'))return false;
-    const grid=node('div',undefined,'gallery-grid');C.gallery.forEach((image,i)=>{const b=button('',()=>viewGallery(i));b.setAttribute('aria-label','Originalfoto '+(i+1)+' vergrößern');const img=node('img');img.src=image.src;img.alt=image.alt;img.loading='lazy';b.append(img);grid.append(b);});content.append(grid);return true;
+    const grid=node('div',undefined,'gallery-grid');C.gallery.forEach((image,i)=>{const b=button('',()=>viewGallery(i));b.setAttribute('aria-label','Foto '+(i+1)+' vergrößern');const img=node('img');img.src=image.src;img.alt=image.alt;img.loading='lazy';b.append(img);grid.append(b);});content.append(grid);return true;
   }
   function updateGallery(){galleryImage.src=C.gallery[galleryIndex].src;galleryImage.alt=C.gallery[galleryIndex].alt;galleryCount.textContent=(galleryIndex+1)+' / '+C.gallery.length;}
   function viewGallery(index){content.replaceChildren();dialog.dataset.mode='gallery-viewer';galleryIndex=index;const frame=node('div',undefined,'gallery-viewer');galleryImage=node('img');frame.append(galleryImage);const controls=node('div',undefined,'gallery-controls');galleryCount=node('span');galleryCount.setAttribute('aria-live','polite');controls.append(button('← Zurück',()=>{galleryIndex=(galleryIndex+C.gallery.length-1)%C.gallery.length;updateGallery();}),galleryCount,button('Weiter →',()=>{galleryIndex=(galleryIndex+1)%C.gallery.length;updateGallery();}));content.append(frame,controls,button('Alle Fotos',()=>showGallery(returnFocus),'text-link'));updateGallery();}
@@ -113,7 +115,11 @@
     if(pr.bottom>0&&pr.top<innerHeight){const p=progress(pr);place.style.setProperty('--place-y',((p-.5)*8*u)+'px');place.style.setProperty('--place-food-x',((p-.5)*12*u)+'px');}
   }
   function request(){if(motionEnabled&&!raf&&!document.hidden)raf=requestAnimationFrame(update);}
-  function reveal(){observer?.disconnect();if(!motionEnabled||!('IntersectionObserver'in window)){$$('[data-reveal]').forEach(e=>e.classList.add('is-visible'));return;}observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');observer.unobserve(e.target);}}),{threshold:.12});$$('[data-reveal]').forEach(e=>observer.observe(e));}
+  /* Szenen-Eingänge: einmal pro Besuch; ohne Bewegung sofort im Endzustand. */
+  const scenes=[menu,dough,reels,place],number=$('.dough-number');let sceneObserver=null,counted=false;
+  function countUp(){if(counted||!number)return;counted=true;if(!motionEnabled){number.textContent='48';return;}let start=0;const d=1100;const step=t=>{if(!start)start=t;const k=Math.min(1,Math.max(0,(t-start)/d)),e=1-Math.pow(1-k,3);number.textContent=String(Math.round(48*e));if(k<1&&motionEnabled&&!document.hidden)requestAnimationFrame(step);else number.textContent='48';};number.textContent='0';requestAnimationFrame(step);}
+  function enter(el){el.classList.add('is-in');if(el===dough)countUp();}
+  function reveal(){observer?.disconnect();sceneObserver?.disconnect();if(!motionEnabled||!('IntersectionObserver'in window)){$$('[data-reveal]').forEach(e=>e.classList.add('is-visible'));scenes.forEach(s=>s.classList.add('is-in'));if(number)number.textContent='48';counted=true;return;}observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');observer.unobserve(e.target);}}),{threshold:.12});$$('[data-reveal]').forEach(e=>observer.observe(e));sceneObserver=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){enter(e.target);sceneObserver.unobserve(e.target);}}),{threshold:.22});scenes.forEach(s=>{if(!s.classList.contains('is-in'))sceneObserver.observe(s);});}
   async function opening(){if(opened||!motionEnabled||scrollY>30)return;opened=true;await Promise.allSettled([document.fonts?.ready??Promise.resolve(),$('.hero-portrait img').decode?.()??Promise.resolve()]);if(!motionEnabled||scrollY>30||!hero.animate)return;const portrait=$('.hero-portrait');intro.push(portrait.animate([{clipPath:'circle(0% at 42% 40%)',opacity:.35},{clipPath:'circle(110% at 42% 40%)',opacity:1}],{duration:1250,easing:'cubic-bezier(.22,.7,.2,1)'}));$$('h1 span',hero).forEach((line,i)=>intro.push(line.animate([{opacity:.3,transform:'translateY(12px)'},{opacity:1,transform:'translateY(0)'}],{duration:750,delay:100+i*90,easing:'ease-out'})));Promise.allSettled(intro.map(a=>a.finished)).then(()=>{intro=[];});}
   function setMotion(){clearMotion();const forced=reduced.matches||Boolean(connection?.saveData);motionEnabled=!forced&&!manualPause;root.classList.toggle('js-motion',motionEnabled);root.classList.toggle('motion-off',!motionEnabled);toggle.disabled=forced;toggle.setAttribute('aria-pressed',String(!motionEnabled));toggle.setAttribute('aria-label',forced?'Bewegung nach deinen Einstellungen reduziert':motionEnabled?'Animationen pausieren':'Animationen fortsetzen');$('span',toggle).textContent=motionEnabled?'Ⅱ':'▷';reveal();request();opening();}
   root.classList.add('js');setMotion();chooseCategory('pizza');

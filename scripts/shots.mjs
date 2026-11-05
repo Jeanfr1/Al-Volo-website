@@ -12,8 +12,12 @@ const browser = await launch();
 for (const [w, h] of sizes) {
   const page = await browser.newPage({ viewport: { width: w, height: h }, deviceScaleFactor: w <= 430 ? 2 : 1, reducedMotion: 'reduce' });
   await page.goto(BASE, { waitUntil: 'networkidle' });
-  await page.evaluate(async () => { for (let y = 0; y < document.body.scrollHeight; y += 400) { scrollTo(0, y); await new Promise(r => setTimeout(r, 40)); } scrollTo(0, 0); });
-  await page.waitForTimeout(400);
+  await page.evaluate(async () => {
+    for (let y = 0; y < document.body.scrollHeight; y += 300) { scrollTo(0, y); await new Promise(r => setTimeout(r, 60)); }
+    await Promise.all([...document.images].map(i => (i.loading = 'eager', i.decode().catch(() => {}))));
+    scrollTo(0, 0);
+  });
+  await page.waitForTimeout(600);
   const scenes = await page.$$eval('main > section', (els, vh) => els.map(e => `${e.id}:${(e.getBoundingClientRect().height / vh).toFixed(2)}`), h);
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth - innerWidth);
   console.log(`${w}x${h}`, scenes.join(' '), 'overflowX', overflow);

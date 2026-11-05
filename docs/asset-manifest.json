@@ -325,5 +325,122 @@
     "width": 752,
     "height": 2092,
     "mode": "RGB"
+  },
+  {
+    "path": "site/photos/plates/booking-ambient.webp",
+    "classification": "derived_plate_from_original_photo",
+    "bytes": 2060,
+    "sha256": "43f17f3ac9d3794e1f5719038e28e15f27325bda5971df8a7d60c13f396f2158",
+    "width": 1000,
+    "height": 250,
+    "mode": "RGB"
+  },
+  {
+    "path": "site/photos/plates/hero-ambient-m.webp",
+    "classification": "derived_plate_from_original_photo",
+    "bytes": 1648,
+    "sha256": "8496a02f24b0940a7efa10c7a6bcba6151e29e161fc1f608cf59409110c3004e",
+    "width": 400,
+    "height": 410,
+    "mode": "RGB"
+  },
+  {
+    "path": "site/photos/plates/hero-ambient.webp",
+    "classification": "derived_plate_from_original_photo",
+    "bytes": 3106,
+    "sha256": "0eb0788540d43caddbcf6791bddf2eb7baf16848c992759ba58ddd296f890eb4",
+    "width": 1000,
+    "height": 370,
+    "mode": "RGB"
+  },
+  {
+    "path": "site/photos/plates/hero-burrata.webp",
+    "classification": "derived_plate_from_original_photo",
+    "bytes": 103106,
+    "sha256": "59dee7a535c362cd218789b9b2c4f3850f35aa8dba7a953ffae041f3ecea856a",
+    "width": 1060,
+    "height": 640,
+    "mode": "RGBA"
+  },
+  {
+    "path": "site/photos/plates/place-ambient.webp",
+    "classification": "derived_plate_from_original_photo",
+    "bytes": 1638,
+    "sha256": "699b20e2d005c790dcd45cfdf4952731ee4c1eb4e6621da9d2cafc47713be95e",
+    "width": 1000,
+    "height": 240,
+    "mode": "RGB"
+  },
+  {
+    "path": "site/photos/plates/reels-ambient.webp",
+    "classification": "derived_plate_from_original_photo",
+    "bytes": 2884,
+    "sha256": "a2f690436e17b7ec1eb8d8834075680e801c861717ae23d571f71a536c6891b9",
+    "width": 1000,
+    "height": 270,
+    "mode": "RGB"
+  },
+  {
+    "path": "site/photos/posters/video-1.webp",
+    "classification": "poster_frame_from_original_video",
+    "bytes": 47638,
+    "sha256": "6f15a38ab8957239eb435041863ae324a9e1dfbe248fdda2d605a6018b5d5643",
+    "width": 576,
+    "height": 1024,
+    "mode": "RGB"
+  },
+  {
+    "path": "site/photos/posters/video-2.webp",
+    "classification": "poster_frame_from_original_video",
+    "bytes": 30930,
+    "sha256": "c7f14909aee3882ae97ae817d349bae00e47dc318366a4701f692d090468b6ac",
+    "width": 576,
+    "height": 1024,
+    "mode": "RGB"
+  },
+  {
+    "path": "site/photos/posters/video-3.webp",
+    "classification": "poster_frame_from_original_video",
+    "bytes": 67766,
+    "sha256": "91542d88e02c472520e45b0aed569f74dd0556dd23586237356e571f01c6f47d",
+    "width": 576,
+    "height": 1024,
+    "mode": "RGB"
+  },
+  {
+    "path": "site/photos/og-al-volo.jpg",
+    "classification": "share_image_from_page_capture",
+    "bytes": 108774,
+    "sha256": "b78fd4f6a78294e431a25b22a40e113c4d798a31ebeee0caf3395225bd3f6df4",
+    "width": 1200,
+    "height": 630,
+    "mode": "RGB"
+  },
+  {
+    "path": "site/brand/seal-320.webp",
+    "classification": "display_copy_of_original_logo",
+    "bytes": 29776,
+    "sha256": "234effe53eca213f5849e7269d6829c76cd7138cf90f3f53c998a77689efcd04",
+    "width": 320,
+    "height": 320,
+    "mode": "RGBA"
+  },
+  {
+    "path": "site/brand/icon-64.png",
+    "classification": "display_copy_of_original_logo",
+    "bytes": 5446,
+    "sha256": "0adef8e7c487377951c561c2ff358a7feffd22273afe7b5efaa4aceafa5f9fd7",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "site/brand/icon-180.png",
+    "classification": "display_copy_of_original_logo",
+    "bytes": 25648,
+    "sha256": "a5ad0719459cad5518c3aaf1e7083156d13027febfa074adfe95cfa15e15403d",
+    "width": 180,
+    "height": 180,
+    "mode": "RGBA"
   }
 ]

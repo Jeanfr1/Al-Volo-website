@@ -1,0 +1,649 @@
+{
+  "date": "2026-11-05",
+  "base": "http://localhost:4437/",
+  "checks": 126,
+  "passed": 126,
+  "failed": 0,
+  "windows": [
+    "1440x790",
+    "1280x650",
+    "1536x730",
+    "1920x950",
+    "1024x768",
+    "768x1024",
+    "390x844",
+    "375x667"
+  ],
+  "results": [
+    {
+      "name": "1440x790 no horizontal overflow",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "1440x790 no script errors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "1440x790 no missing local files",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "1440x790 no text under 11 px",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "1440x790 no photo shown above 1.25x its pixels",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "1440x790 hero within one screen",
+      "pass": true,
+      "detail": "0.91"
+    },
+    {
+      "name": "1440x790 scenes at most 0.85 screen",
+      "pass": true,
+      "detail": "speisekarte 0.59, konzept 0.60, erleben 0.56, pizzeria 0.48, reservieren 0.51"
+    },
+    {
+      "name": "1440x790 hero actions above the fold",
+      "pass": true,
+      "detail": "580"
+    },
+    {
+      "name": "1440x790 title capped at 76 px",
+      "pass": true,
+      "detail": "76"
+    },
+    {
+      "name": "1440x790 portrait capped at 560 px",
+      "pass": true,
+      "detail": "560"
+    },
+    {
+      "name": "1440x790 macro capped at 740 px",
+      "pass": true,
+      "detail": "740"
+    },
+    {
+      "name": "1280x650 no horizontal overflow",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "1280x650 no script errors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "1280x650 no missing local files",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "1280x650 no text under 11 px",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "1280x650 no photo shown above 1.25x its pixels",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "1280x650 hero within one screen",
+      "pass": true,
+      "detail": "0.95"
+    },
+    {
+      "name": "1280x650 scenes at most 0.85 screen",
+      "pass": true,
+      "detail": "speisekarte 0.62, konzept 0.63, erleben 0.58, pizzeria 0.50, reservieren 0.53"
+    },
+    {
+      "name": "1280x650 hero actions above the fold",
+      "pass": true,
+      "detail": "499"
+    },
+    {
+      "name": "1280x650 title capped at 76 px",
+      "pass": true,
+      "detail": "65"
+    },
+    {
+      "name": "1280x650 portrait capped at 560 px",
+      "pass": true,
+      "detail": "479"
+    },
+    {
+      "name": "1280x650 macro capped at 740 px",
+      "pass": true,
+      "detail": "633"
+    },
+    {
+      "name": "1536x730 no horizontal overflow",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "1536x730 no script errors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "1536x730 no missing local files",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "1536x730 no text under 11 px",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "1536x730 no photo shown above 1.25x its pixels",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "1536x730 hero within one screen",
+      "pass": true,
+      "detail": "0.95"
+    },
+    {
+      "name": "1536x730 scenes at most 0.85 screen",
+      "pass": true,
+      "detail": "speisekarte 0.62, konzept 0.63, erleben 0.58, pizzeria 0.50, reservieren 0.53"
+    },
+    {
+      "name": "1536x730 hero actions above the fold",
+      "pass": true,
+      "detail": "557"
+    },
+    {
+      "name": "1536x730 title capped at 76 px",
+      "pass": true,
+      "detail": "73"
+    },
+    {
+      "name": "1536x730 portrait capped at 560 px",
+      "pass": true,
+      "detail": "538"
+    },
+    {
+      "name": "1536x730 macro capped at 740 px",
+      "pass": true,
+      "detail": "711"
+    },
+    {
+      "name": "1920x950 no horizontal overflow",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "1920x950 no script errors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "1920x950 no missing local files",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "1920x950 no text under 11 px",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "1920x950 no photo shown above 1.25x its pixels",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "1920x950 hero within one screen",
+      "pass": true,
+      "detail": "0.76"
+    },
+    {
+      "name": "1920x950 scenes at most 0.85 screen",
+      "pass": true,
+      "detail": "speisekarte 0.49, konzept 0.50, erleben 0.47, pizzeria 0.40, reservieren 0.42"
+    },
+    {
+      "name": "1920x950 hero actions above the fold",
+      "pass": true,
+      "detail": "580"
+    },
+    {
+      "name": "1920x950 title capped at 76 px",
+      "pass": true,
+      "detail": "76"
+    },
+    {
+      "name": "1920x950 portrait capped at 560 px",
+      "pass": true,
+      "detail": "560"
+    },
+    {
+      "name": "1920x950 macro capped at 740 px",
+      "pass": true,
+      "detail": "740"
+    },
+    {
+      "name": "1024x768 no horizontal overflow",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "1024x768 no script errors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "1024x768 no missing local files",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "1024x768 no text under 11 px",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "1024x768 no photo shown above 1.25x its pixels",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "1024x768 hero within one screen",
+      "pass": true,
+      "detail": "0.94"
+    },
+    {
+      "name": "1024x768 scenes at most 0.85 screen",
+      "pass": true,
+      "detail": "speisekarte 0.61, konzept 0.62, erleben 0.58, pizzeria 0.50, reservieren 0.52"
+    },
+    {
+      "name": "1024x768 hero actions above the fold",
+      "pass": true,
+      "detail": "580"
+    },
+    {
+      "name": "1024x768 title capped at 76 px",
+      "pass": true,
+      "detail": "76"
+    },
+    {
+      "name": "1024x768 portrait capped at 560 px",
+      "pass": true,
+      "detail": "560"
+    },
+    {
+      "name": "1024x768 macro capped at 740 px",
+      "pass": true,
+      "detail": "740"
+    },
+    {
+      "name": "768x1024 no horizontal overflow",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "768x1024 no script errors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "768x1024 no missing local files",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "768x1024 no text under 11 px",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "768x1024 no photo shown above 1.25x its pixels",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "768x1024 hero within one screen",
+      "pass": true,
+      "detail": "0.53"
+    },
+    {
+      "name": "768x1024 scenes at most 0.85 screen",
+      "pass": true,
+      "detail": "speisekarte 0.34, konzept 0.35, erleben 0.32, pizzeria 0.28, reservieren 0.29"
+    },
+    {
+      "name": "768x1024 hero actions above the fold",
+      "pass": true,
+      "detail": "443"
+    },
+    {
+      "name": "768x1024 title capped at 76 px",
+      "pass": true,
+      "detail": "57"
+    },
+    {
+      "name": "768x1024 portrait capped at 560 px",
+      "pass": true,
+      "detail": "420"
+    },
+    {
+      "name": "768x1024 macro capped at 740 px",
+      "pass": true,
+      "detail": "555"
+    },
+    {
+      "name": "390x844 no horizontal overflow",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "390x844 no script errors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "390x844 no missing local files",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "390x844 no text under 11 px",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "390x844 no photo shown above 1.25x its pixels",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "390x844 title readable on phones",
+      "pass": true,
+      "detail": "36.66"
+    },
+    {
+      "name": "375x667 no horizontal overflow",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "375x667 no script errors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "375x667 no missing local files",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "375x667 no text under 11 px",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "375x667 no photo shown above 1.25x its pixels",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "375x667 title readable on phones",
+      "pass": true,
+      "detail": "36"
+    },
+    {
+      "name": "1440x790 category switches selection",
+      "pass": true,
+      "detail": "{\"opt\":\"Spaghetti Bolognese · 18 €\",\"img\":\"photos/alvolo-8.webp\",\"sel\":\"true\"}"
+    },
+    {
+      "name": "1440x790 tabs follow arrow keys",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "1440x790 dish description shown",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "1440x790 menu search finds Burrata",
+      "pass": true,
+      "detail": "Burrata,Burrata"
+    },
+    {
+      "name": "1440x790 menu dialog closes with Escape",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "1440x790 DISH opens behind a consent gate",
+      "pass": true,
+      "detail": "{\"open\":true,\"frames\":0,\"btn\":[\"DISH laden\"]}"
+    },
+    {
+      "name": "1440x790 DISH iframe uses the restaurant widget",
+      "pass": true,
+      "detail": "https://reservation.dish.co/widget/hydra-7ba734db-67cb-4e91-8fdb-57aabc92fa4b?eid=hydra-7ba734db-67cb-4e91-8fdb-57aabc92fa4b&tagid=hors-hydra-7ba734db-67cb-4e91-8fdb-57aabc92fa4b&width=100%25&height=650&foregroundColor=%230A0A0A&backgroundColor=%23F4E7CF&linkColor=%23C41E3A&errorColor=%23C41E3A&primaryButtonForegroundColor=%23F4E7CF&primaryButtonBackgroundColor=%23C41E3A&secondaryButtonForegroundColor=%23C41E3A&secondaryButtonBackgroundColor=%23F4E7CF"
+    },
+    {
+      "name": "1440x790 DISH dialog closes",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "1440x790 DISH step pills open the booking",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "1440x790 film plays in dialog with controls",
+      "pass": true,
+      "detail": "{\"src\":\"videos/video-2-alvolo.mp4\",\"controls\":true,\"ready\":1,\"poster\":\"photos/posters/video-2.webp\"}"
+    },
+    {
+      "name": "1440x790 film removed on close",
+      "pass": true,
+      "detail": "{\"open\":false,\"video\":false,\"mode\":\"\",\"active\":\"<a class=\\\"reel\\\" href=\\\"videos/video-2-alvolo.mp4\\\" data-video=\\\"2\\\" aria-label=\\\"Vide\"}"
+    },
+    {
+      "name": "1440x790 lunch display behind a gate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "1440x790 gallery shows 12 photos",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "1440x790 gallery arrows",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "1440x790 map behind a gate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "1440x790 settings list three services",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "1440x790 concept dialog",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "1440x790 phone, mail, Wolt, Instagram, TikTok, legal links",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "1440x790 no script errors after interactions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "390x844 category switches selection",
+      "pass": true,
+      "detail": "{\"opt\":\"Spaghetti Bolognese · 18 €\",\"img\":\"photos/alvolo-8.webp\",\"sel\":\"true\"}"
+    },
+    {
+      "name": "390x844 tabs follow arrow keys",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "390x844 dish description shown",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "390x844 menu search finds Burrata",
+      "pass": true,
+      "detail": "Burrata,Burrata"
+    },
+    {
+      "name": "390x844 menu dialog closes with Escape",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "390x844 DISH opens behind a consent gate",
+      "pass": true,
+      "detail": "{\"open\":true,\"frames\":0,\"btn\":[\"DISH laden\"]}"
+    },
+    {
+      "name": "390x844 DISH iframe uses the restaurant widget",
+      "pass": true,
+      "detail": "https://reservation.dish.co/widget/hydra-7ba734db-67cb-4e91-8fdb-57aabc92fa4b?eid=hydra-7ba734db-67cb-4e91-8fdb-57aabc92fa4b&tagid=hors-hydra-7ba734db-67cb-4e91-8fdb-57aabc92fa4b&width=100%25&height=650&foregroundColor=%230A0A0A&backgroundColor=%23F4E7CF&linkColor=%23C41E3A&errorColor=%23C41E3A&primaryButtonForegroundColor=%23F4E7CF&primaryButtonBackgroundColor=%23C41E3A&secondaryButtonForegroundColor=%23C41E3A&secondaryButtonBackgroundColor=%23F4E7CF"
+    },
+    {
+      "name": "390x844 DISH dialog closes",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "390x844 DISH step pills open the booking",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "390x844 film plays in dialog with controls",
+      "pass": true,
+      "detail": "{\"src\":\"videos/video-2-alvolo.mp4\",\"controls\":true,\"ready\":4,\"poster\":\"photos/posters/video-2.webp\"}"
+    },
+    {
+      "name": "390x844 film removed on close",
+      "pass": true,
+      "detail": "{\"open\":false,\"video\":false,\"mode\":\"\",\"active\":\"<a class=\\\"reel\\\" href=\\\"videos/video-2-alvolo.mp4\\\" data-video=\\\"2\\\" aria-label=\\\"Vide\"}"
+    },
+    {
+      "name": "390x844 lunch display behind a gate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "390x844 gallery shows 12 photos",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "390x844 gallery arrows",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "390x844 map behind a gate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "390x844 settings list three services",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "390x844 concept dialog",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "390x844 phone menu opens",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "390x844 phone menu closes after a choice",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "390x844 phone, mail, Wolt, Instagram, TikTok, legal links",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "390x844 no script errors after interactions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "motion: hero opening finishes on the portrait",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "motion: all scenes entered",
+      "pass": true,
+      "detail": "speisekarte,konzept,erleben,pizzeria"
+    },
+    {
+      "name": "motion: 48 counted up to 48",
+      "pass": true,
+      "detail": "48"
+    },
+    {
+      "name": "motion: no text left hidden",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "motion: pause button stops motion and is remembered",
+      "pass": true,
+      "detail": "{\"off\":true,\"saved\":\"1\"}"
+    },
+    {
+      "name": "motion: no script errors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "copy: no production notes visible",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "page carries noindex",
+      "pass": true,
+      "detail": ""
+    }
+  ]
+}

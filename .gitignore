@@ -3,3 +3,4 @@ node_modules/
 .vercel/
 # QA captures, README raw frames, scratch renders
 studio/
+__pycache__/
