@@ -12,6 +12,6 @@ window.ALVOLO=Object.freeze({
   gift:'https://alvolo.de/belohnung',impressum:'https://alvolo.de/impressum',privacy:'https://alvolo.de/datenschutz',
   dish:{eid:'hydra-7ba734db-67cb-4e91-8fdb-57aabc92fa4b',base:'https://reservation.dish.co/widget/'},
   deals:'https://gezerview.gezermedia.de/play/cmo4yv78j0006apjrfbdbwt2x?token=cmo4yv78j0008apjritb3pa6r',
-  videos:[{id:2,title:'Einblicke 01',src:'videos/video-2-alvolo.mp4',poster:'photos/posters/video-2.webp'},{id:1,title:'Einblicke 02',src:'videos/video-1-alvolo.mp4',poster:'photos/posters/video-1.webp'},{id:3,title:'Einblicke 03',src:'videos/video-3-alvolo.mp4',poster:'photos/posters/video-3.webp'}],
+  videos:[{id:1,title:'Aus unserer Küche',src:'videos/video-1-alvolo.mp4',poster:'photos/posters/video-1.webp'},{id:2,title:'Unsere Winterterrasse',src:'videos/video-2-alvolo.mp4',poster:'photos/posters/video-2.webp'},{id:3,title:'Lieblingsgerichte',src:'videos/video-3-alvolo.mp4',poster:'photos/posters/video-3.webp'}],
   gallery:[1,3,2,5,4,13,6,9,8,11,10,12].map(n=>({src:'photos/alvolo-'+n+'.webp',alt:'Aus der Pizzeria Al Volo, Hamburg'}))
 });

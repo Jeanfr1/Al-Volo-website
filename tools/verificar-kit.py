@@ -12,18 +12,20 @@ def sha(f):return hashlib.sha256(f.read_bytes()).hexdigest()
 class HTML(HTMLParser):
     def __init__(self,text):super().__init__();self.nodes=[];self.feed(text)
     def handle_starttag(self,tag,attrs):self.nodes.append((tag,dict(attrs)))
-html=(ROOT/'site/index.html').read_text();css=(ROOT/'site/styles.css').read_text();js=(ROOT/'site/app.js').read_text();doc=HTML(html)
+html=(ROOT/'site/index.html').read_text();css=(ROOT/'site/styles.css').read_text();js=(ROOT/'site/app.js').read_text();mjs=(ROOT/'site/motion.js').read_text();doc=HTML(html)
 ids=[a['id']for _,a in doc.nodes if'id'in a];known=set(ids)
 arch=json.loads((ROOT/'docs/architecture-lock.json').read_text());contract=json.loads((ROOT/'docs/scale-contract.json').read_text())
 sel=json.loads((ROOT/'docs/selection.json').read_text());scenes=[{'id':a.get('id'),'scene':a.get('data-scene'),'background':a.get('data-background')}for t,a in doc.nodes if t=='section']
 check('Modelo 1 no hero e corpo',sel['selected_model']==sel['hero_model']==sel['body_model']==1)
-check('Seis cenas na ordem aprovada',scenes==arch['scenes'] and len(scenes)==6)
+board_ids=[s['id']for s in arch['board_scenes']]
+check('Seis cenas do board na ordem aprovada',[s for s in scenes if s['id']in board_ids]==arch['board_scenes']and len(board_ids)==6)
+check('Cenas de paridade com o alvolo.de registradas',scenes==arch['scenes'])
 check('Um contraste principal de cor lisa',sum(s['background']=='solid'for s in scenes)==1 and scenes[2]['id']=='konzept')
 check('Idioma alemão e H1 único',any(t=='html'and a.get('lang')=='de'for t,a in doc.nodes)and sum(t=='h1'for t,_ in doc.nodes)==1)
 check('IDs únicos',len(ids)==len(known))
 check('Site estático sem identidade de outro cliente',json.loads((ROOT/'site/.openai/hosting.json').read_text())=={'static':{'directory':'.'}})
 check('Sem vídeo gerado ou publicação',not sel['generated_new_video']and not sel['published'])
-check('Prancha não é usada como fundo do site','references/'not in html+css+js and not re.search(r'exec-[a-f0-9-]+\.png',html+css+js))
+check('Prancha não é usada como fundo do site','references/'not in html+css+js+mjs and not re.search(r'exec-[a-f0-9-]+\.png',html+css+js+mjs))
 bad_paths=[];bad_aria=[];bad_dims=[];bad_links=[]
 for tag,a in doc.nodes:
     for key in ('src','href','srcset'):
@@ -39,7 +41,7 @@ for tag,a in doc.nodes:
     if tag=='img':
         if'alt'not in a:bad_aria.append('img sem alt')
         f=ROOT/'site'/a['src']
-        if f.is_file():
+        if f.is_file()and f.suffix!='.svg':
             with Image.open(f) as im:
                 if (int(a.get('width',0)),int(a.get('height',0)))!=im.size:bad_dims.append(a['src'])
 check('Caminhos HTML resolvem',not bad_paths,str(bad_paths));check('ARIA e alt resolvem',not bad_aria,str(bad_aria))
@@ -47,7 +49,7 @@ check('Dimensões de imagens declaradas corretas',not bad_dims,str(bad_dims));ch
 refs=re.findall(r'url\([\'\"]?([^\)\'\"]+)',css);check('Recursos CSS locais',all((ROOT/'site'/x).is_file()for x in refs),str(refs))
 check('CSS com delimitadores equilibrados',css.count('{')==css.count('}')and css.count('(')==css.count(')'))
 check('Fontes e scripts de renderização locais',not any(a.get('src','').startswith('http')for t,a in doc.nodes if t in('script','img'))and'https://'not in css)
-for filename in ('app.js','content.js','menu-data.js'):
+for filename in ('app.js','motion.js','content.js','menu-data.js'):
     try:r=subprocess.run(['node','--check',str(ROOT/'site'/filename)],capture_output=True,text=True);check('Sintaxe '+filename,r.returncode==0,r.stderr.strip())
     except OSError as e:check('Sintaxe '+filename,False,str(e))
 program="const fs=require('fs'),vm=require('vm');const c={window:{}};vm.createContext(c);for(const f of ['content.js','menu-data.js'])vm.runInContext(fs.readFileSync(process.argv[1]+'/'+f,'utf8'),c);process.stdout.write(JSON.stringify({data:c.window.ALVOLO,menu:c.window.ALVOLO_MENU}));"
@@ -69,12 +71,15 @@ check('Carta original preservada',sha(ROOT/'site/Speisekarte-Al-Volo-Original.pd
 check('Categorias apontam para fotos locais',all((ROOT/'site'/c['image']).is_file()for c in M['categories']))
 check('Busca e abas com teclado','toLocaleLowerCase'in js and'ArrowRight'in js and"e.key==='Home'"in js and"e.key==='End'"in js)
 check('Retorno de foco e fechamento nativo','returnFocus?.focus()'in js and"dialog.addEventListener('close'"in js)
-check('Vídeos por ação e limpeza de áudio','data-video='in html and'video.controls=true'in js and'video.pause()'in js and'<video'not in html)
+inline=[a for t,a in doc.nodes if t=='video']
+check('Vídeos com som só por ação; inline mudos e sob demanda','data-video='in html and'video.controls=true'in js and'video.pause()'in js and inline and all('muted'in a and'playsinline'in a and a.get('preload')=='none'and a.get('data-src')and not a.get('src')for a in inline),str(len(inline)))
 check('Galeria com 12 fotos e teclado',len(C['gallery'])==12 and'gallery-viewer'in js and'ArrowLeft'in js)
 check('Preferências externas e movimento separadas','alvolo.preferences.v1'in js and'alvolo.motion.paused'in js)
 check('Movimento reduzido e economia de dados','prefers-reduced-motion: reduce'in js and'connection?.saveData'in js)
-check('Scroll nativo e sem loop contínuo',not re.search(r'addEventListener\([\'\"](?:wheel|touchmove)|setInterval\(',js)and'requestAnimationFrame(update)'in js)
-check('Interrupção em aba oculta','document.hidden'in js and'cancelAnimationFrame(raf)'in js)
+check('Scroll nativo e sem loop contínuo',not re.search(r'addEventListener\([\'\"](?:wheel|touchmove)|setInterval\(|scrollerProxy|ScrollSmoother',js+mjs)and'requestAnimationFrame(update)'in js)
+check('Interrupção em aba oculta','document.hidden'in js and'cancelAnimationFrame(raf)'in js and'document.hidden'in mjs)
+check('Movimento montado e revertido por inteiro','alvolo:motion'in js and'alvolo:motion'in mjs and'ctx.revert()'in mjs and'unsplit()'in mjs)
+check('GSAP local com licença',all((ROOT/'site/vendor'/f).is_file()and'GreenSock'in(ROOT/'site/vendor'/f).read_text()[:600]for f in('gsap.min.js','ScrollTrigger.min.js')))
 
 # A regra de escala é um contrato independente da resolução raster do board.
 check('Base 1024 e teto 1',contract['baseline_px']==1024 and contract['max_desktop_scale']==1)

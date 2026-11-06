@@ -21,6 +21,76 @@
       "background": "solid"
     },
     {
+      "id": "unser-konzept",
+      "scene": "three-pillars",
+      "background": "paper"
+    },
+    {
+      "id": "ueber-uns",
+      "scene": "quality-inside",
+      "background": "dark"
+    },
+    {
+      "id": "passione",
+      "scene": "pizza-pasta-passione",
+      "background": "paper"
+    },
+    {
+      "id": "erleben",
+      "scene": "original-films",
+      "background": "photographic"
+    },
+    {
+      "id": "mittagstisch",
+      "scene": "lunch-screen",
+      "background": "paper"
+    },
+    {
+      "id": "pizzeria",
+      "scene": "hamburg-italia",
+      "background": "photographic"
+    },
+    {
+      "id": "impressionen",
+      "scene": "impressions",
+      "background": "dark"
+    },
+    {
+      "id": "bewertungen",
+      "scene": "rate-follow-gift",
+      "background": "paper"
+    },
+    {
+      "id": "reservieren",
+      "scene": "your-place",
+      "background": "photographic"
+    },
+    {
+      "id": "kontakt",
+      "scene": "find-us",
+      "background": "photographic"
+    }
+  ],
+  "main_solid_scene_count": 1,
+  "generated_video": false,
+  "published": false,
+  "board_scenes": [
+    {
+      "id": "home",
+      "scene": "momenti-veri",
+      "background": "photographic"
+    },
+    {
+      "id": "speisekarte",
+      "scene": "circular-menu",
+      "background": "photo-and-paper"
+    },
+    {
+      "id": "konzept",
+      "scene": "forty-eight-hours",
+      "background": "solid"
+    },
+    {
       "id": "erleben",
       "scene": "original-films",
       "background": "photographic"
@@ -36,7 +106,17 @@
       "background": "photographic"
     }
   ],
-  "main_solid_scene_count": 1,
-  "generated_video": false,
-  "published": false
+  "parity_scenes_added": {
+    "date": "2026-11-06",
+    "reason": "Every section and fact of alvolo.de must be on the page (Konzept pillars, Über uns, Mittagstisch, Impressionen, Bewertungen & Belohnung, Standort); the board scene count is not a cap.",
+    "ids": [
+      "unser-konzept",
+      "ueber-uns",
+      "passione",
+      "mittagstisch",
+      "impressionen",
+      "bewertungen",
+      "kontakt"
+    ]
+  }
 }

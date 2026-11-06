@@ -1,10 +1,10 @@
 # QA — Al Volo / Momenti Veri
 
-**PASS — 112/112 verificações estáticas aprovadas.** 06/11/2026.
+**PASS — 116/116 verificações estáticas aprovadas.** 06/11/2026.
 
 ## Navegador
 
-**PASS 126/126 (2026-11-05).** `scripts/qa.mjs` (Playwright/Chromium) mede no DOM as cenas em telas reais (1440x790, 1280x650, 1536x730, 1920x950, 1024x768, 768x1024, 390x844, 375x667), overflow, erros de console, tamanhos mínimos de texto, fotos acima dos próprios pixels, todos os diálogos (carta e busca, DISH, GezerView, mapa, vídeos, galeria, configurações), links oficiais, movimento ligado/pausado e textos visíveis. Serviços externos ficam bloqueados no teste: só os destinos são conferidos. Resultados em `browser-qa.json`.
+**PASS 143/143 (2026-11-06).** `scripts/qa.mjs` (Playwright/Chromium) mede no DOM as cenas em telas reais (1440x790, 1280x650, 1536x730, 1920x950, 1024x768, 768x1024, 390x844, 375x667), overflow, erros de console, tamanhos mínimos de texto, fotos acima dos próprios pixels, todos os diálogos (carta e busca, DISH, GezerView, mapa, vídeos, galeria, configurações), links oficiais, movimento ligado/pausado e textos visíveis. Serviços externos ficam bloqueados no teste: só os destinos são conferidos. Resultados em `browser-qa.json`.
 
 
 Cobertura: modelo e cenas, links locais, ARIA, sintaxe JS, carta/seleção, originais, canal alfa, fontes/licenças, hashes e regra de escala. Resultados por verificação em `QA.json`.

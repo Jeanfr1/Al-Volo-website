@@ -11,5 +11,8 @@
   },
   "devDependencies": {
     "playwright-core": "^1.56.1"
+  },
+  "dependencies": {
+    "gsap": "3.13.0"
   }
 }

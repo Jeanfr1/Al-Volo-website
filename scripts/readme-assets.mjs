@@ -1,7 +1,8 @@
 // README assets from the running site (npm run dev in another terminal):
 //   .github/assets/banner.png · hero-scroll.gif · desktop-sections.jpg · mobile-screens.jpg
-// The GIF is deterministic: every running animation is paused and stepped through its
-// currentTime, so the frames don't depend on screenshot latency.
+// The GIF: the intro is filmed with GSAP's global clock slowed to 0.3x (so screenshot latency
+// barely moves it), then the page is scrolled position by position and each frame is taken
+// 350 ms after the scroll, while the scrubbed scenes are still catching up.
 // usage: node scripts/readme-assets.mjs [banner|gif|desktop|mobile ...]
 import { launch, BASE } from './browser.mjs';
 import { mkdirSync, rmSync, writeFileSync } from 'node:fs';
@@ -10,7 +11,7 @@ import { execFileSync } from 'node:child_process';
 const ROOT = new URL('../', import.meta.url).pathname;
 const OUT = ROOT + '.github/assets/';
 const TMP = ROOT + 'studio/readme/';
-const SCENES = ['home', 'speisekarte', 'konzept', 'erleben', 'pizzeria', 'reservieren'];
+const SCENES = ['home', 'speisekarte', 'konzept', 'unser-konzept', 'ueber-uns', 'passione', 'erleben', 'mittagstisch', 'impressionen', 'bewertungen', 'reservieren', 'kontakt'];
 const want = process.argv.slice(2).length ? process.argv.slice(2) : ['banner', 'gif', 'desktop', 'mobile'];
 mkdirSync(OUT, { recursive: true });
 const browser = await launch();
@@ -71,40 +72,19 @@ if (want.includes('gif')) {
   const p = await browser.newPage({ viewport: { width: 1440, height: 900 } });
   let n = 0;
   const shot = async (hold = 1) => { const buf = await p.screenshot(); for (let k = 0; k < hold; k++) writeFileSync(`${dir}f_${String(++n).padStart(4, '0')}.png`, buf); };
-  // Step every running animation from where it is now to its end, in `steps` frames.
-  const step = async (steps, hold) => {
-    const plan = await p.evaluate(() => { const a = document.getAnimations(); a.forEach(x => x.pause());
-      return a.map(x => ({ from: x.currentTime || 0, to: x.effect.getComputedTiming().endTime })); });
-    // paused animations ignore the timeline, so let it run: rAF-driven JS (the 48 count) plays in real time
-    await cdp.send('Animation.setPlaybackRate', { playbackRate: 1 });
-    for (let s = 1; s <= steps; s++) {
-      await p.evaluate(([plan, f]) => document.getAnimations().forEach((x, i) => { if (plan[i]) x.currentTime = plan[i].from + (plan[i].to - plan[i].from) * f; }), [plan, s / steps]);
-      await p.waitForTimeout(110); await settle(p); await shot(s === steps ? hold : 1);
-    }
-    await p.evaluate(() => document.getAnimations().forEach(x => x.finish()));
-    await cdp.send('Animation.setPlaybackRate', { playbackRate: 0 });
-  };
-  // Freeze the document timeline: animations that start (intro, entrances triggered while
-  // scrolling) wait at their first frame until step() plays them through.
-  const cdp = await p.context().newCDPSession(p);
-  await cdp.send('Animation.enable'); await cdp.send('Animation.setPlaybackRate', { playbackRate: 0 });
+  await p.addInitScript(() => { const t = setInterval(() => { if (window.gsap) { gsap.globalTimeline.timeScale(0.3); clearInterval(t); } }, 5); });
   await p.goto(BASE, { waitUntil: 'domcontentloaded' });
-  await p.waitForFunction(() => document.getAnimations().some(a => a.effect?.target?.classList?.contains('hero-portrait')), null, { polling: 'raf' });
-  await settle(p); await shot(3);
-  await step(11, 8);
-  let y = 0;
-  for (const id of SCENES.slice(1)) {
-    const target = await centreOf(p, id);
-    for (const f of [0.35, 0.72, 1]) { await scrollTo(p, Math.round(y + (target - y) * f)); await p.waitForTimeout(120); await settle(p); await shot(); }
-    y = target;
-    await p.waitForTimeout(60);
-    await step(6, 5);
-  }
+  await p.waitForFunction(() => window.gsap && window.ScrollTrigger && document.querySelector('.header .seal').style.transform, null, { polling: 'raf' });
+  await p.addStyleTag({ content: 'html{scroll-behavior:auto!important}' });
+  // the intro runs about 3.3 s: 14 frames, about 0.24 s of animation apart
+  for (let k = 0; k < 14; k++) { await shot(k === 0 ? 3 : 1); await p.waitForTimeout(720); }
+  await p.evaluate(() => { gsap.globalTimeline.timeScale(1); }); await p.waitForTimeout(400); await shot(8);
   const end = await p.evaluate(() => document.documentElement.scrollHeight - innerHeight);
-  for (const f of [0.5, 1]) { await scrollTo(p, Math.round(y + (end - y) * f)); await p.waitForTimeout(200); await settle(p); await shot(f === 1 ? 12 : 1); }
+  const steps = 40;
+  for (let k = 1; k <= steps; k++) { await scrollTo(p, Math.round(end * k / steps)); await p.waitForTimeout(350); await settle(p); await shot(k === steps ? 12 : 1); }
   await p.close();
-  execFileSync('ffmpeg', ['-v', 'error', '-y', '-framerate', '10', '-i', `${dir}f_%04d.png`, '-vf',
-    'fps=10,scale=900:-1:flags=lanczos,split[a][b];[a]palettegen=max_colors=128:stats_mode=diff[p];[b][p]paletteuse=dither=bayer:bayer_scale=4:diff_mode=rectangle',
+  execFileSync('ffmpeg', ['-v', 'error', '-y', '-framerate', '9', '-i', `${dir}f_%04d.png`, '-vf',
+    'fps=9,scale=800:-1:flags=lanczos,split[a][b];[a]palettegen=max_colors=128:stats_mode=diff[p];[b][p]paletteuse=dither=bayer:bayer_scale=4:diff_mode=rectangle',
     '-loop', '0', OUT + 'hero-scroll.gif']);
   console.log('hero-scroll.gif', n, 'frames');
 }
@@ -123,13 +103,14 @@ def frame(path):
     f.paste(im,(0,bar)); m=Image.new('L',f.size,0); ImageDraw.Draw(m).rounded_rectangle((0,0,f.width-1,f.height-1),radius=12,fill=255)
     out=Image.new('RGB',f.size,'#F4E7CF'); out.paste(f,(0,0),m); return out
 fr=[frame(f) for f in fs]; h=fr[0].height
-sheet=Image.new('RGB',(pad*2+W*2+gap,pad*2+h*3+gap*2),'#F4E7CF')
+rows=(len(fr)+1)//2
+sheet=Image.new('RGB',(pad*2+W*2+gap,pad*2+h*rows+gap*(rows-1)),'#F4E7CF')
 for i,im in enumerate(fr): sheet.paste(im,(pad+(i%2)*(W+gap),pad+(i//2)*(h+gap)))
 sheet.save('${OUT}desktop-sections.jpg',quality=84,optimize=True,progressive=True); print('desktop-sections.jpg',sheet.size)`);
 }
 
 if (want.includes('mobile')) {
-  await stills(390, 844, TMP + 'mobile/', ['home', 'speisekarte', 'erleben', 'reservieren'], 'top');
+  await stills(390, 844, TMP + 'mobile/', ['home', 'speisekarte', 'passione', 'erleben', 'kontakt'], 'top');
   py(`
 import glob
 from PIL import Image, ImageDraw

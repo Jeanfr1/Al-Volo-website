@@ -30,12 +30,12 @@ A regra reutilizável está em `process/BASE-DE-ESCALA-1024.md`, com instruçõe
 
 | Local | Conteúdo |
 | --- | --- |
-| `site/` | Site estático com seis cenas, menus e diálogos funcionais, fontes e mídias locais |
+| `site/` | Site estático com treze cenas, menus e diálogos funcionais, fontes e mídias locais |
 | `brand/` | PNG original transparente, paleta e guia de uso |
 | `fonts/` | Fontes TTF, fontes oficiais de origem e licenças OFL |
 | `images/originals/` | 14 fotografias originais preservadas |
 | `site/photos/` | Versões otimizadas e três posters extraídos dos vídeos originais |
-| `site/videos/` | Três MP4 originais, sem geração ou alteração de vídeo |
+| `site/videos/` | Três MP4 originais intactos; `loops/` traz cortes mudos e mais leves deles para as cenas animadas |
 | `site/Speisekarte-Al-Volo-Original.pdf` | Carta completa original, com comida, bebidas e extras |
 | `references/` | A imagem exata do modelo 1 aprovado; não é screenshot da implementação |
 | `roteiros/` e `motion/` | Direção de arte, animações, transições, integração e timeline |
@@ -43,14 +43,23 @@ A regra reutilizável está em `process/BASE-DE-ESCALA-1024.md`, com instruçõe
 | `tools/` | Exportação de assets e verificação do kit |
 | `MANIFEST.sha256` | Integridade dos demais arquivos desta versão |
 
-## As seis cenas
+## As treze cenas
+
+O kit aprovado tinha seis cenas. A implementação traz também todas as seções e informações do site atual `alvolo.de`, desenhadas no estilo do board:
 
 1. **Hier schmeckt das Leben.** Pessoa e mesa reais, tipografia retrô, selo AV e ações principais.
 2. **Worauf hast du Lust?** Fotografia de pizza com enquadramento circular, categorias e seleção interativa; PDF completo sempre acessível.
 3. **48 Stunden. Für diesen Moment.** Contraste vermelho, foto real do preparo e informações sobre conceito e massa para levar. É a única cena principal inteiramente de cor lisa.
-4. **Vom Teig zum Tisch.** Três vídeos originais com reprodução por escolha do visitante; acesso à exibição de almoço/ofertas.
-5. **Ein Stück Hamburg. Viel Italien.** Fachada, galeria ampliável, Wolt, Google, redes e promoção existente.
-6. **Dein Platz wartet.** Fotografia e entrada real para o DISH, contatos, horário e links oficiais.
+4. **Mehr als Pizza – ein Stück Italien in Hamburg.** Os três pilares do site atual: Pizza, Frische, Tradition.
+5. **Qualität kommt von innen.** Os seis motivos (Steinofen, ingredientes, 48h de massa, Wolt, pizza para fazer em casa, avaliações) em trilho lateral.
+6. **Pizza, Pasta, Passione.** As três palavras preenchidas com trechos dos vídeos da cozinha.
+7. **Vom Teig zum Tisch.** Texto do site atual e os três vídeos como stories; o vídeo completo com som abre ao toque.
+8. **Mittagstisch und andere Deals.** Acesso à exibição de almoço/ofertas da pizzaria e telefone.
+9. **Ein Stück Hamburg. Viel Italien.** Fachada, Wolt, Google, Instagram, TikTok e vale-presente.
+10. **Einblicke in unsere Pizzeria.** As 12 fotos da galeria em duas faixas, cada uma ampliável.
+11. **Bewerten, Folgen – und beschenkt werden.** Nota no Google e a promoção existente em três passos.
+12. **Dein Platz wartet.** Fotografia e entrada real para o DISH, telefone, e-mail e endereço.
+13. **Pizzeria Al Volo.** Endereço, horário, rota, mapa e redes; depois o rodapé com Impressum, Datenschutz e configurações.
 
 ## Interações e conteúdo preservado
 
@@ -58,7 +67,7 @@ A seleção de menu reúne 21 itens em oito categorias, com busca e valores conf
 
 A reserva abre o **DISH real** do restaurante. A área de almoço/ofertas abre o display **GezerView existente**. Ambos são carregados quando o visitante solicita; há abertura externa e telefone de alternativa. Não foram criados backend, carrinho, preços de ofertas ou confirmações fictícias de reserva.
 
-Vídeos são os MP4 originais: verticais, com som e legendas/marcas já presentes nas fontes. Só iniciam após ação do visitante. A galeria contém as 12 fotos da galeria original; as outras duas fotos são usadas na apresentação. Contatos, Maps, Instagram, TikTok e Wolt estão ligados.
+Vídeos com som são os MP4 originais: verticais, com legendas/marcas já presentes nas fontes, e só iniciam após ação do visitante. Com movimento ativo, cortes mudos desses mesmos vídeos tocam nas cenas *Passione* e *Vom Teig zum Tisch* apenas enquanto estão na tela. A galeria contém as 12 fotos da galeria original; as outras duas fotos são usadas na apresentação. Contatos, Maps, Instagram, TikTok e Wolt estão ligados.
 
 Os links de promoção, Impressum e Datenschutz continuam nas **páginas oficiais existentes**. Isso preserva termos e informações do responsável. Ao substituir a hospedagem de `alvolo.de`, mantenha essas rotas ou integre suas versões atuais aprovadas; não remova os destinos. O detalhamento de cada função está em `docs/PARIDADE-FUNCIONAL.md`.
 
@@ -73,7 +82,7 @@ As 14 fotos e os três vídeos vieram do site oficial. Os originais e seus hashe
 - Conteúdo geral e serviços: `site/content.js`; contatos visíveis e JSON-LD também aparecem em `site/index.html`.
 - Seleção de pratos: `site/menu-data.js`. Use a carta oficial vigente, preservando o PDF completo.
 - Escala/layout: `site/styles.css`. Não remover o teto de 1024 px nem aplicar multiplicadores por 760 px.
-- Movimento e diálogos: `site/app.js`. Preferência de movimento reduzido e economia de dados prevalecem; o botão de pausa conserva a escolha local.
+- Movimento: `site/motion.js` (GSAP 3.13 e ScrollTrigger em `site/vendor/`). Diálogos e o interruptor de movimento: `site/app.js`. Preferência de movimento reduzido e economia de dados prevalecem; o botão de pausa conserva a escolha local.
 - Dados externos: confirmar disponibilidade, termos, URLs e conteúdo atual no momento da publicação.
 
 Validação: `python3 tools/verificar-kit.py`. Para reexportar assets, instale as dependências de `tools/requirements.txt` e execute `python3 tools/preparar-assets.py`; FFmpeg é necessário apenas para recriar os posters. O site não depende de Python ou FFmpeg para funcionar.
@@ -86,9 +95,10 @@ O site em `site/` foi conferido no navegador contra a prancha aprovada. O `READM
 
 - **Escala**: `--u` continua com teto de 1 px e base de 1024. Em janelas baixas, também respeita a altura (`100svh / 760`), apenas para **reduzir**, para o hero caber em uma tela. Não há multiplicador `viewport / 760`.
 - **Fundos**: cada foto de cena se funde a uma placa desfocada dela mesma (`site/photos/plates/`), gerada por `scripts/prepare-plates.py`. Ondas e costuras usam a mesma grade de 1024 unidades (`site/shapes/`).
-- **Posters**: quadros dos três MP4 originais, escolhidos pelo assunto (`site/photos/posters/`). Nenhum vídeo novo.
+- **Posters e loops**: quadros dos três MP4 originais, escolhidos pelo assunto (`site/photos/posters/`). Os loops mudos de `site/videos/loops/` são cortes desses mesmos vídeos, gerados por `scripts/prepare-motion.py`. Nenhuma imagem de vídeo nova.
 - **Logo**: `site/brand/logo-original.png` continua idêntico ao da marca. O selo e os favicons usam cópias reduzidas do mesmo arquivo (`seal-320.webp`, `icon-64.png`, `icon-180.png`), sem redesenho.
-- **Animações**: abertura e parallax do roteiro, mais uma entrada por cena (íris do macro, manjericão, pincel, janela do chef, 48 contando, rama de tomate, cartões de vídeo, fachada, pizza, sublinhado). Movimento reduzido, pausa e economia de dados mostram o estado final.
-- **Validação**: `npm run qa` (126 verificações em 8 tamanhos de janela, em `docs/browser-qa.json`) e `npm run manifest` (hashes, verificador do kit e `MANIFEST.sha256`).
+- **Animações (refeitas em 06/11/2026)**: coreografia com GSAP e ScrollTrigger, ligada à rolagem e reversível. O selo gira, abre a página como íris e volta ao cabeçalho; o título sobe letra por letra; ao sair do hero as linhas se separam e o retrato se fecha num círculo. Três cenas ficam fixas enquanto o conteúdo anda: os seis motivos em trilho lateral, as palavras *Pizza, Pasta, Passione* preenchidas com os vídeos e os três vídeos em stories. As demais cenas têm íris, contadores, faixas de fotos, display que liga, alfinete que cai e horário em placas que viram. Movimento reduzido, pausa e economia de dados desfazem tudo e mostram o estado final.
+- **Peso**: 1,95 MB no primeiro carregamento a 1440 × 900 e 1,51 MB no celular; os vídeos completos com som (7,7 MB) só carregam ao toque.
+- **Validação**: `npm run qa` (143 verificações em 8 tamanhos de janela, em `docs/browser-qa.json`, incluindo cenas fixas, vídeos só na tela e texto coberto pela cena seguinte) e `npm run manifest` (hashes, verificador do kit com 116 verificações e `MANIFEST.sha256`).
 - **Publicação**: https://al-volo-hamburg.vercel.app (Vercel, projeto `al-volo-hamburg`, ligado ao GitHub: cada push no `main` publica). Fica com `noindex` até o domínio próprio.
 - **Pendências do cliente**: marcadas como `TODO(alvolo)` no código e listadas no `README.md`.

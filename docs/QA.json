@@ -1,10 +1,10 @@
 {
   "date": "2026-11-06",
   "status": "PASS",
-  "checks": 112,
-  "passed": 112,
+  "checks": 116,
+  "passed": 116,
   "failed": 0,
-  "browser_qa": "PASS 126/126 (2026-11-05)",
+  "browser_qa": "PASS 143/143 (2026-11-06)",
   "browser_reason": "scripts/qa.mjs in Chromium (Playwright): density gates at 1440x790, 1280x650, 1536x730, 1920x950, 1024x768, 768x1024, 390x844, 375x667, overflow, console errors, every dialog and link, motion on/off, visible copy scan. External services blocked during QA; only their URLs were checked.",
   "scale_verification": "CSS contract, font metrics and DOM measurement in the browser QA",
   "external_services": "Configured original destinations. No reservation/order submitted.",
@@ -15,7 +15,12 @@
       "detail": ""
     },
     {
-      "name": "Seis cenas na ordem aprovada",
+      "name": "Seis cenas do board na ordem aprovada",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Cenas de paridade com o alvolo.de registradas",
       "pass": true,
       "detail": ""
     },
@@ -72,7 +77,7 @@
     {
       "name": "Recursos CSS locais",
       "pass": true,
-      "detail": "['fonts/Caprasimo-Regular.woff', 'fonts/DMSans-Regular.woff', 'fonts/DMSans-SemiBold.woff', 'fonts/DMSans-Bold.woff', 'shapes/wave-menu.svg', 'shapes/wave-dough.svg', 'shapes/wave-reels.svg', 'shapes/wave-place.svg', 'shapes/wave-booking.svg']"
+      "detail": "['fonts/Caprasimo-Regular.woff', 'fonts/DMSans-Regular.woff', 'fonts/DMSans-SemiBold.woff', 'fonts/DMSans-Bold.woff', 'shapes/wave-menu.svg', 'shapes/wave-dough.svg', 'shapes/wave-pillars.svg', 'shapes/wave-about.svg', 'shapes/wave-passione.svg', 'shapes/word-pizza.svg', 'shapes/word-pizza.svg', 'shapes/word-pasta.svg', 'shapes/word-pasta.svg', 'shapes/word-passione.svg', 'shapes/word-passione.svg', 'shapes/wave-reels.svg', 'shapes/wave-deals.svg', 'shapes/wave-place.svg', 'shapes/wave-gallery.svg', 'shapes/wave-reviews.svg', 'shapes/wave-booking.svg', 'shapes/wave-visit.svg', 'shapes/wave-footer.svg']"
     },
     {
       "name": "CSS com delimitadores equilibrados",
@@ -86,6 +91,11 @@
     },
     {
       "name": "Sintaxe app.js",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Sintaxe motion.js",
       "pass": true,
       "detail": ""
     },
@@ -185,9 +195,9 @@
       "detail": ""
     },
     {
-      "name": "Vídeos por ação e limpeza de áudio",
+      "name": "Vídeos com som só por ação; inline mudos e sob demanda",
       "pass": true,
-      "detail": ""
+      "detail": "6"
     },
     {
       "name": "Galeria com 12 fotos e teclado",
@@ -211,6 +221,16 @@
     },
     {
       "name": "Interrupção em aba oculta",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Movimento montado e revertido por inteiro",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "GSAP local com licença",
       "pass": true,
       "detail": ""
     },
